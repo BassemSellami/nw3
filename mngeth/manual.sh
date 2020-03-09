@@ -1,51 +1,28 @@
-sudo apt update
-sudo apt -y upgrade
-sudo apt install -y build-essential linux-headers-$(uname -r)
-sudo apt install -y git zip python3-pip
+#geth --datadir $DDR1 --password <(echo -n 1234) account new
+#geth --datadir $DDR2 --password <(echo -n 1234) account new
+#geth --datadir $DDR3 --password <(echo -n 1234) account new
 
-sudo add-apt-repository -y ppa:ethereum/ethereum
-sudo apt-get update
-sudo apt-get install -y ethereum
+#geth --datadir=$DDR1 --networkid 714715 --nat extip:172.16.87.133 --netrestrict 172.16.87.0/24 --port 30303 console
+#geth --datadir=$DDR2 --networkid 714715 --nat extip:172.16.87.133 --netrestrict 172.16.87.0/24 --port 30304 console
+#geth --datadir=$DDR3 --networkid 714715 --nat extip:172.16.87.133 --netrestrict 172.16.87.0/24 --port 30305 console
 
-git clone https://github.com/haochenpan/nw3
+geth --datadir=$DDR1 --networkid 714715 --nat extip:172.16.87.135 --netrestrict 172.16.87.0/24 --port 30303
 
-cd
-mkdir -p ethData1/keystore
-mkdir -p ethData2/keystore
-mkdir -p ethData3/keystore
-echo export DDR1=~/ethData1 >> ~/.bashrc
-echo export DDR2=~/ethData2 >> ~/.bashrc
-echo export DDR3=~/ethData3 >> ~/.bashrc
-source  ~/.bashrc
+#geth attach $DDR1/geth.ipc --exec admin.nodeInfo.enr | tr -d '"' >~/boot.key
+#export BT=$(cat ~/boot.key) >>~/.bashrc
+#geth --datadir $DDR2 --networkid 714715 --port 30304 --bootnodes $BT
 
-
-geth --datadir $DDR1 --password <(echo -n 1234) account new
-geth --datadir $DDR2 --password <(echo -n 1234) account new
-geth --datadir $DDR3 --password <(echo -n 1234) account new
-
-
-# replace keys, save the following as genesis.json
-
-
-geth init --datadir $DDR1 genesis.json
-geth init --datadir $DDR2 genesis.json
-geth init --datadir $DDR3 genesis.json
-
-geth --datadir=$DDR1 --networkid 714714 --nat extip:172.16.87.133 --netrestrict 172.16.87.0/24 console
-geth --datadir=$DDR2 --networkid 714714 --nat extip:172.16.87.133 --netrestrict 172.16.87.0/24 --port 30307 console
-geth --datadir=$DDR3 --networkid 714714 --nat extip:172.16.87.133 --netrestrict 172.16.87.0/24 --port 30308 console
-
-# 2nd
-geth attach $DDR1/geth.ipc --exec admin.nodeInfo.enr | tr -d '"' > ~/boot.key
-echo export BT=$(cat ~/boot.key) >> ~/.bashrc
-source ~/.bashrc
-geth --datadir $DDR2 --networkid 714714 --port 30304 --bootnodes $BT
-
+ENODE_ADDRESS="enode://$(bootnode -nodekey $DDR1/geth/nodekey -writeaddress)@172.16.87.135:30303"
+ENODE_ADDRESS="enode://$(bootnode -nodekey $DDR1/geth/nodekey -writeaddress)@10.0.0.1:30303"
+geth --datadir $DDR2 --networkid 714715 --port 30304 --bootnodes $ENODE_ADDRESS
 # 3rd
-geth attach $DDR2/geth.ipc --exec admin.peers
-geth --datadir $DDR3 --networkid 714714 --port 30307 --mine --minerthreads=1 --etherbase=0x0213AF577D12cF11a5baF5a869e0B1305684cA0A
-geth --datadir $DDR2 --networkid 714714 --port 30307 --mine --minerthreads=3 --etherbase=0x2dEC65F7F6FECef9088Afed7AB41Ad0F1173DDb4
+geth attach $DDR2/geth.ipc --exec admin.peers # check the 2nd node joins
+geth --datadir $DDR3 --networkid 714715 --port 30307 --mine --minerthreads=4 --etherbase=0x0213af577d12cf11a5baf5a869e0b1305684ca0a
+
+#geth --datadir=$DDR3 --networkid 714715 --nat extip:10.0.0.1 --netrestrict 10.0.0.0/24 --port 30305 console
+geth attach $DDR3/geth.ipc --exec 'web3.fromWei(eth.getBalance(eth.coinbase), "ether")'
+killall geth
 
 
-# mine
-geth --mine --minerthreads=1 --datadir $DDR --networkid 714714
+h2 ENODE_ADDRESS="enode://$(bootnode -nodekey $DDR1/geth/nodekey -writeaddress)@10.0.0.1:30303"
+h2 geth --datadir $DDR2 --networkid 714715 --port 30304 --bootnodes $ENODE_ADDRESS
