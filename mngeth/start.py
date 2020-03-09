@@ -2,6 +2,7 @@ from sys import modules
 from os import system
 from functools import partial
 from topos import *
+from geth import *
 from conf import conf
 from time import sleep
 from mininet.net import Mininet
@@ -11,15 +12,6 @@ from mininet.util import dumpNodeConnections
 from mininet.log import setLogLevel
 from mininet.cli import CLI
 import subprocess
-
-h1_start_node = "geth --datadir=$DDR1 --networkid 714714 --nat extip:10.0.0.1 --netrestrict 10.0.0.0/24 --port 30303 &"
-h1_gen_bootkey = "geth attach $DDR1/geth.ipc --exec admin.nodeInfo.enr | tr -d '\"' >~/boot.key"
-h2_exp_bootkey = "export BT=$(cat ~/boot.key)"
-h2_start_node = "geth --datadir $DDR2 --networkid 714714 --port 30304 --bootnodes $BT &"
-h2_check_join = "geth attach $DDR2/geth.ipc --exec admin.peers"
-h3_start_mine = "geth --datadir $DDR3 --networkid 714714 --port 30307 --mine --minerthreads=1 --etherbase=0x0213af577d12cf11a5baf5a869e0b1305684ca0a &"
-h3_check_mine = "geth attach $DDR3/geth.ipc --exec 'web3.fromWei(eth.getBalance(eth.coinbase), \"ether\")'"
-h3_clean_up = "killall geth"
 
 
 def get_topology():
@@ -88,20 +80,19 @@ def main():
         h.cmdPrint("cd ~")
         h.cmdPrint("ls")
 
-
     delay_command(1, h1_start_node)
-    delay_command(1, h1_gen_bootkey)
-    # delay_command(2, h2_exp_bootkey)
-    # delay_command(2, h2_start_node)
-    # sleep(5)
-    # delay_command(2, h2_check_join)
-    # delay_command(3, h3_start_mine)
-    # for i in range(120):
-    #     delay_command(3, h3_check_mine)
-    # delay_command(3, h3_clean_up)
+    delay_command(2, h2_gen_enode)
+    delay_command(2, h2_start_node)
+    sleep(2)
+    delay_command(2, h2_check_join)
+    delay_command(3, h3_start_mine)
+    for i in range(20):
+        print("i =", i)
+        delay_command(3, h3_check_mine)
+    delay_command(3, h3_clean_up)
 
     # enables client control
-    CLI(net)
+    # CLI(net)
 
     # stop the network
     net.stop()
