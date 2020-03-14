@@ -89,10 +89,10 @@ def main():
     for i in range(20):
         print("i =", i)
         delay_command(3, h3_check_mine)
-    delay_command(3, h3_clean_up)
+    # delay_command(3, h3_clean_up)
 
     # enables client control
-    # CLI(net)
+    CLI(net)
 
     # stop the network
     net.stop()

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 cd
-rm -rf $DDR1 $DDR2 $DDR3 boot.key
+rm -rf $DDR1 $DDR2 $DDR3 boot.key nohup*
 mkdir -p ethData1/keystore
 mkdir -p ethData2/keystore
 mkdir -p ethData3/keystore

@@ -6,7 +6,7 @@
 #geth --datadir=$DDR2 --networkid 714715 --nat extip:172.16.87.133 --netrestrict 172.16.87.0/24 --port 30304 console
 #geth --datadir=$DDR3 --networkid 714715 --nat extip:172.16.87.133 --netrestrict 172.16.87.0/24 --port 30305 console
 
-geth --datadir=$DDR1 --networkid 714715 --nat extip:172.16.87.135 --netrestrict 172.16.87.0/24 --port 30303
+geth --datadir=$DDR1 --networkid 714715 --nat extip:172.16.87.135 --netrestrict 172.16.87.0/24 --port 30303 console
 #geth --datadir=$DDR1 --networkid 714715 --nat extip:10.0.0.1 --netrestrict 10.0.0.0/24 --port 30303
 
 #geth attach $DDR1/geth.ipc --exec admin.nodeInfo.enr | tr -d '"' >~/boot.key
@@ -23,3 +23,10 @@ geth --datadir $DDR3 --networkid 714715 --port 30305 --mine --minerthreads=1 --e
 #geth --datadir=$DDR3 --networkid 714715 --nat extip:10.0.0.1 --netrestrict 10.0.0.0/24 --port 30305 console
 geth attach $DDR3/geth.ipc --exec 'web3.fromWei(eth.getBalance(eth.coinbase), "ether")'
 killall geth
+
+
+from jsonrpcclient.clients.http_client import HTTPClient
+client = HTTPClient("localhost:8545")
+
+response = client.send('{"id": 1, "method": "eth_subscribe", "params": ["logs"]}')
+
