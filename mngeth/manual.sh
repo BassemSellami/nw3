@@ -2,31 +2,25 @@
 #geth --datadir $DDR2 --password <(echo -n 1234) account new
 #geth --datadir $DDR3 --password <(echo -n 1234) account new
 
-#geth --datadir=$DDR1 --networkid 714715 --nat extip:172.16.87.133 --netrestrict 172.16.87.0/24 --port 30303 console
-#geth --datadir=$DDR2 --networkid 714715 --nat extip:172.16.87.133 --netrestrict 172.16.87.0/24 --port 30304 console
-#geth --datadir=$DDR3 --networkid 714715 --nat extip:172.16.87.133 --netrestrict 172.16.87.0/24 --port 30305 console
 
-geth --datadir=$DDR1 --networkid 714715 --nat extip:172.16.87.135 --netrestrict 172.16.87.0/24 --port 30303 console
-#geth --datadir=$DDR1 --networkid 714715 --nat extip:10.0.0.1 --netrestrict 10.0.0.0/24 --port 30303
+geth --datadir=$DDR1 --networkid 714715 --port 30303 --nat extip:192.168.197.128 --netrestrict 192.168.197.0/24
 
-#geth attach $DDR1/geth.ipc --exec admin.nodeInfo.enr | tr -d '"' >~/boot.key
-#export BT=$(cat ~/boot.key) >>~/.bashrc
-#geth --datadir $DDR2 --networkid 714715 --port 30304 --bootnodes $BT
-
-ENODE_ADDRESS="enode://$(bootnode -nodekey $DDR1/geth/nodekey -writeaddress)@172.16.87.135:30303"
-#ENODE_ADDRESS="enode://$(bootnode -nodekey $DDR1/geth/nodekey -writeaddress)@10.0.0.1:30303"
-geth --datadir $DDR2 --networkid 714715 --port 30304 --bootnodes $ENODE_ADDRESS
-# 3rd
-geth attach $DDR2/geth.ipc --exec admin.peers # check the 2nd node joins
-geth --datadir $DDR3 --networkid 714715 --port 30305 --mine --minerthreads=1 --etherbase=0x0213af577d12cf11a5baf5a869e0b1305684ca0a
-
-#geth --datadir=$DDR3 --networkid 714715 --nat extip:10.0.0.1 --netrestrict 10.0.0.0/24 --port 30305 console
-geth attach $DDR3/geth.ipc --exec 'web3.fromWei(eth.getBalance(eth.coinbase), "ether")'
-killall geth
+ENODE_ADDRESS="enode://$(bootnode -nodekey $DDR1/geth/nodekey -writeaddress)@192.168.197.128:30303"
+geth --datadir $DDR2 --networkid 714715 --port 30304 --nat extip:192.168.197.128 --netrestrict 192.168.197.0/24 --bootnodes $ENODE_ADDRESS --mine --minerthreads=1 --etherbase=0x2dec65f7f6fecef9088afed7ab41ad0f1173ddb4
+geth --datadir $DDR3 --networkid 714715 --port 30305 --nat extip:192.168.197.128 --netrestrict 192.168.197.0/24 --bootnodes $ENODE_ADDRESS --mine --minerthreads=1 --etherbase=0x0213af577d12cf11a5baf5a869e0b1305684ca0a
 
 
-from jsonrpcclient.clients.http_client import HTTPClient
-client = HTTPClient("localhost:8545")
+eth.getBlock("latest")
 
-response = client.send('{"id": 1, "method": "eth_subscribe", "params": ["logs"]}')
 
+h1 nohup geth --datadir=$DDR1 --networkid 714715 --port 30303 --nat extip:10.0.0.1 --netrestrict 10.0.0.0/24 > nohup1.out &
+
+h2 ENODE_ADDRESS="enode://$(bootnode -nodekey $DDR1/geth/nodekey -writeaddress)@10.0.0.1:30303"
+h3 ENODE_ADDRESS="enode://$(bootnode -nodekey $DDR1/geth/nodekey -writeaddress)@10.0.0.1:30303"
+
+h2 nohup geth --datadir $DDR2 --networkid 714715 --port 30304 --nat extip:10.0.0.2 --netrestrict 10.0.0.0/24 --bootnodes $ENODE_ADDRESS --mine --minerthreads=1 --etherbase=0x2dec65f7f6fecef9088afed7ab41ad0f1173ddb4 > nohup2.out &
+h3 nohup geth --datadir $DDR3 --networkid 714715 --port 30305 --nat extip:10.0.0.3 --netrestrict 10.0.0.0/24 --bootnodes $ENODE_ADDRESS --mine --minerthreads=1 --etherbase=0x0213af577d12cf11a5baf5a869e0b1305684ca0a > nohup3.out &
+
+geth attach $DDR1/geth.ipc
+geth attach $DDR2/geth.ipc
+geth attach $DDR3/geth.ipc

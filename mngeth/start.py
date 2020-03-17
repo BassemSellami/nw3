@@ -4,14 +4,13 @@ from functools import partial
 from topos import *
 from geth import *
 from conf import conf
-from time import sleep
+from time import sleep, time
 from mininet.net import Mininet
 from mininet.node import CPULimitedHost
 from mininet.link import TCLink
 from mininet.util import dumpNodeConnections
 from mininet.log import setLogLevel
 from mininet.cli import CLI
-import subprocess
 
 
 def get_topology():
@@ -57,15 +56,18 @@ def test_topology(topo: Topo, net: Mininet):
 
 
 def main():
-    def delay_command(host, cmd):
-        sleep(1)
-        hs[host - 1].cmdPrint(cmd)
-        sleep(1)
+    def delay_command(host, cmd, print=True):
+        sleep(0.1)
+        if print:
+            hs[host - 1].cmdPrint(cmd)
+        else:
+            hs[host - 1].cmd(cmd)
+        sleep(0.1)
 
     system('sudo mn --clean')
     setLogLevel('info')
-    system("chmod 700 ./rerun.sh")
-    subprocess.call(['./rerun.sh'])
+    # system("chmod 700 ./prerun.sh")
+    # subprocess.call(['./prerun.sh'])
 
     # reads YAML configs and creates the network
     topo, net = get_topology()
@@ -80,19 +82,34 @@ def main():
         h.cmdPrint("cd ~")
         h.cmdPrint("ls")
 
-    delay_command(1, h1_start_node)
-    delay_command(2, h2_gen_enode)
-    delay_command(2, h2_start_node)
-    sleep(2)
-    delay_command(2, h2_check_join)
-    delay_command(3, h3_start_mine)
-    for i in range(20):
-        print("i =", i)
-        delay_command(3, h3_check_mine)
-    # delay_command(3, h3_clean_up)
+    delay_command(1, node_1_start)
+    delay_command(2, gen_enode)
+    delay_command(3, gen_enode)
+    delay_command(4, gen_enode)
+    delay_command(2, node_2_start)
+    delay_command(3, node_3_start)
+    delay_command(4, node_4_start)
+    delay_command(2, node_2_check_join)
+    delay_command(3, node_3_check_join)
+    delay_command(4, node_4_check_join)
+
+    time1 = time()
+    for i in range(50):
+        delay_command(1, node_1_check_blocks_alt, False)
+        delta = time() - time1
+        num = read_get_block()
+        throughput = num / delta
+        print("i =", i, "total # of blocks = ", num, "throughput = ", round(throughput, 2), "blocks/sec")
+        sleep(1)
+
+        # delay_command(1, node_1_check_blocks)
+        # delay_command(2, node_2_check_blocks)
+        # delay_command(3, node_3_check_mine)
+        # delay_command(4, node_4_check_mine)
 
     # enables client control
-    CLI(net)
+    # CLI(net)
+    # delay_command(1, clean_up)
 
     # stop the network
     net.stop()
@@ -100,3 +117,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    # read_get_block()
