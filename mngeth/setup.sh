@@ -15,6 +15,10 @@ echo 'export PATH=$PATH:/usr/local/go/bin' >> /etc/profile
 echo 'export GOPATH=/usr/local/go' >> /etc/profile
 source /etc/profile
 
+#cd
+#git clone https://github.com/ethereum/go-ethereum.git
+#cd go-ethereum
+#make geth
 
 cd
 mkdir mininet
