@@ -12,13 +12,5 @@ def pre_process():
         conf["nw_topo"]["kwargs"] = {}
 
 
-def get_node_params():
-    return conf["nw_node_param"]
-
-
-def get_link_params():
-    return conf["nw_link_param"]
-
-
 pre_process()
 pprint.pprint(conf)

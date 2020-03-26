@@ -1,0 +1,24 @@
+# Configuration YAML v2
+
+network:
+  topo:
+    class: SingleSwitchTopo
+    args:
+      - 4
+
+  link:
+    bw: 100    # e.g., 100 (Mb/s)
+    delay: 1s  # e.g., 1s, 1ms
+    jitter: 1s  # e.g., 1s, 1ms
+    loss: 0    # e.g.,1 (percent)
+
+  node:
+    cpu: -1
+    cores: null
+
+  test:
+    iperf: -1
+
+
+
+
