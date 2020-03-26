@@ -32,7 +32,7 @@ node_2_start = (
 node_3_start = (
     f"nohup ~/go-ethereum/build/bin/geth --datadir $DDR3 --networkid {network_id} --port {bootnode_port + 2} "
     f"--nat extip:{node_3} --netrestrict 10.0.0.0/24 "
-    f"--bootnodes $ENODE_ADDRESS --mine --minerthreads=1 --etherbase={node_3_miner_base} "
+    f"--bootnodes $ENODE_ADDRESS --mine --minerthreads=2 --etherbase={node_3_miner_base} "
     f"> nohup-{node_3}.out &")
 node_4_start = (
     f"nohup ~/go-ethereum/build/bin/geth --datadir $DDR4 --networkid {network_id} --port {bootnode_port + 3} "
