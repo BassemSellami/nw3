@@ -94,7 +94,7 @@ def main():
     delay_command(4, node_4_check_join)
 
     time1 = time()
-    for i in range(50):
+    for i in range(120):
         delay_command(1, node_1_check_blocks_alt, False)
         delta = time() - time1
         num = read_get_block()
