@@ -1,0 +1,508 @@
+INFO [04-11|14:39:57.930] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [04-11|14:39:57.930] Smartcard socket not found, disabling    err="stat /run/pcscd/pcscd.comm: no such file or directory"
+INFO [04-11|14:39:57.932] Starting peer-to-peer node               instance=Geth/v1.9.12-stable/linux-amd64/go1.14
+INFO [04-11|14:39:57.932] Allocated trie memory caches             clean=256.00MiB dirty=256.00MiB
+INFO [04-11|14:39:57.932] Allocated cache and file handles         database=/root/ethData2/geth/chaindata cache=512.00MiB handles=524288
+INFO [04-11|14:39:58.005] Opened ancient database                  database=/root/ethData2/geth/chaindata/ancient
+INFO [04-11|14:39:58.005] Initialised chain configuration          config="{ChainID: 714715 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: 0 EIP155: 0 EIP158: 0 Byzantium: 0 Constantinople: 0 Petersburg: 0 Istanbul: <nil>, Muir Glacier: <nil>, Engine: ethash}"
+INFO [04-11|14:39:58.005] Disk storage enabled for ethash caches   dir=/root/ethData2/geth/ethash count=3
+INFO [04-11|14:39:58.005] Disk storage enabled for ethash DAGs     dir=/root/.ethash              count=2
+INFO [04-11|14:39:58.005] Initialising Ethereum protocol           versions="[65 64 63]" network=714715 dbversion=<nil>
+WARN [04-11|14:39:58.005] Upgrade blockchain database version      from=<nil> to=7
+INFO [04-11|14:39:58.005] Loaded most recent local header          number=0 hash=a9ea9a…7d2b4a td=1 age=51y3d14h
+INFO [04-11|14:39:58.005] Loaded most recent local full block      number=0 hash=a9ea9a…7d2b4a td=1 age=51y3d14h
+INFO [04-11|14:39:58.005] Loaded most recent local fast block      number=0 hash=a9ea9a…7d2b4a td=1 age=51y3d14h
+INFO [04-11|14:39:58.006] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [04-11|14:39:58.015] Allocated fast sync bloom                size=512.00MiB
+INFO [04-11|14:39:58.020] Initialized fast sync bloom              items=6 errorrate=0.000 elapsed=5.262ms
+INFO [04-11|14:39:58.027] Mapped network port                      proto=tcp extport=30304 intport=30304 interface=ExtIP(10.0.0.2)
+INFO [04-11|14:39:58.027] Mapped network port                      proto=udp extport=30304 intport=30304 interface=ExtIP(10.0.0.2)
+INFO [04-11|14:39:58.028] New local node record                    seq=1 id=debdd52cf45bd3c3 ip=10.0.0.2 udp=30304 tcp=30304
+INFO [04-11|14:39:58.028] Started P2P networking                   self=enode://cd4b49219d86adecd778ed357d0311de829bb738d9a4fbca3d9c5ae7987d7b63b2615c358c3369f58a6ab478b7282c79ac0611806814fb8aa7b6bebd2f5fe54c@10.0.0.2:30304
+INFO [04-11|14:39:58.029] IPC endpoint opened                      url=/root/ethData2/geth.ipc
+WARN [04-11|14:40:00.106] Fast syncing, discarded propagated block number=1 hash=009169…f052d9
+INFO [04-11|14:40:00.533] Block synchronisation started 
+INFO [04-11|14:40:00.541] Imported new state entries               count=2 elapsed=2.825ms processed=2 pending=0 retry=0 duplicate=0 unexpected=0
+INFO [04-11|14:40:00.543] Imported new block headers               count=3 elapsed=7.937ms number=3 hash=473d62…134ea1
+INFO [04-11|14:40:00.544] Imported new chain segment               blocks=3 txs=0 mgas=0.000 elapsed=569.639µs mgasps=0.000 number=3 hash=473d62…134ea1 dirty=1.42KiB
+INFO [04-11|14:40:00.642] Fast sync complete, auto disabling 
+INFO [04-11|14:40:03.047] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.052ms   mgasps=0.000 number=4 hash=4a8126…5963ca dirty=1.89KiB
+INFO [04-11|14:40:03.150] Deallocated fast sync bloom              items=8 errorrate=0.000
+INFO [04-11|14:40:03.161] Imported new chain segment               blocks=2 txs=0 mgas=0.000 elapsed=8.514ms   mgasps=0.000 number=6 hash=3f2c1c…4b5593 dirty=2.84KiB
+INFO [04-11|14:40:03.353] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.683ms   mgasps=0.000 number=7 hash=db3d19…560d98 dirty=3.32KiB
+INFO [04-11|14:40:03.353] Mining too far in the future             wait=2s
+INFO [04-11|14:40:03.769] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.501ms   mgasps=0.000 number=4 hash=ac8659…4e9ab1 dirty=3.79KiB
+INFO [04-11|14:40:03.984] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.191ms   mgasps=0.000 number=5 hash=69808f…4c6057 dirty=4.26KiB
+INFO [04-11|14:40:04.211] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.228ms   mgasps=0.000 number=6 hash=8f9ab5…28a199 dirty=4.74KiB
+INFO [04-11|14:40:05.125] Chain reorg detected                     number=3 hash=473d62…134ea1 drop=4 dropfrom=db3d19…560d98 add=4 addfrom=e4cade…8d0598
+INFO [04-11|14:40:05.125] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=3.654ms   mgasps=0.000 number=7 hash=e4cade…8d0598 dirty=5.21KiB
+INFO [04-11|14:40:06.154] Chain reorg detected                     number=3 hash=473d62…134ea1 drop=4 dropfrom=e4cade…8d0598 add=5 addfrom=051d79…cf708f
+INFO [04-11|14:40:06.154] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=8.741ms   mgasps=0.000 number=8 hash=051d79…cf708f dirty=5.92KiB
+INFO [04-11|14:40:08.384] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.444ms   mgasps=0.000 number=9 hash=39e0e6…0fee85 dirty=6.39KiB
+INFO [04-11|14:40:08.899] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=8.900ms   mgasps=0.000 number=10 hash=a00fbf…692d81 dirty=6.87KiB
+INFO [04-11|14:40:09.440] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.901ms   mgasps=0.000 number=8  hash=1bee7d…b9ce32 dirty=7.34KiB
+INFO [04-11|14:40:10.494] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.889ms   mgasps=0.000 number=11 hash=2193ac…785522 dirty=7.81KiB
+INFO [04-11|14:40:11.965] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.924ms   mgasps=0.000 number=12 hash=5ef825…1f3853 dirty=8.29KiB
+INFO [04-11|14:40:13.549] Chain reorg detected                     number=3  hash=473d62…134ea1 drop=9 dropfrom=5ef825…1f3853 add=10 addfrom=5c6900…a86483
+INFO [04-11|14:40:13.549] Imported new chain segment               blocks=5 txs=0 mgas=0.000 elapsed=8.892ms   mgasps=0.000 number=13 hash=5c6900…a86483 dirty=10.66KiB
+INFO [04-11|14:40:13.719] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.068ms   mgasps=0.000 number=14 hash=48f8f9…37c825 dirty=11.13KiB
+INFO [04-11|14:40:13.719] Mining too far in the future             wait=2s
+INFO [04-11|14:40:14.716] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.551ms   mgasps=0.000 number=13 hash=a24975…a9e4de dirty=11.61KiB
+INFO [04-11|14:40:15.459] Chain reorg detected                     number=3  hash=473d62…134ea1 drop=11 dropfrom=48f8f9…37c825 add=11 addfrom=b910f7…c88a6a
+INFO [04-11|14:40:15.720] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=265.087ms mgasps=0.000 number=14 hash=b910f7…c88a6a dirty=12.08KiB
+INFO [04-11|14:40:16.077] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.820ms   mgasps=0.000 number=15 hash=1f4d0b…7b21b0 dirty=12.56KiB
+INFO [04-11|14:40:16.334] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.194ms   mgasps=0.000 number=15 hash=42c20b…989db7 dirty=13.03KiB
+INFO [04-11|14:40:16.594] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.007ms   mgasps=0.000 number=16 hash=d2f020…424487 dirty=13.51KiB
+INFO [04-11|14:40:17.676] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.798ms   mgasps=0.000 number=16 hash=897e6a…c9e4bf dirty=13.98KiB
+INFO [04-11|14:40:18.606] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.666ms   mgasps=0.000 number=17 hash=778215…4bc775 dirty=14.46KiB
+INFO [04-11|14:40:19.104] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.875ms   mgasps=0.000 number=17 hash=892a09…b64ac9 dirty=14.93KiB
+INFO [04-11|14:40:19.322] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.711ms   mgasps=0.000 number=18 hash=1ec9cf…bf4539 dirty=15.41KiB
+INFO [04-11|14:40:19.640] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=3.623ms   mgasps=0.000 number=18 hash=30bda9…1ad40a dirty=15.88KiB
+INFO [04-11|14:40:22.570] Chain reorg detected                     number=3  hash=473d62…134ea1 drop=15 dropfrom=1ec9cf…bf4539 add=16 addfrom=228106…b2a8c0
+INFO [04-11|14:40:22.572] Imported new chain segment               blocks=4 txs=0 mgas=0.000 elapsed=11.958ms  mgasps=0.000 number=22 hash=4a8968…1b0637 dirty=17.30KiB
+INFO [04-11|14:40:23.128] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.784ms   mgasps=0.000 number=23 hash=684008…a2f938 dirty=17.54KiB
+INFO [04-11|14:40:23.878] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.439ms   mgasps=0.000 number=21 hash=c7fdc7…4ddb27 dirty=18.02KiB
+INFO [04-11|14:40:24.294] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.536ms   mgasps=0.000 number=22 hash=17c5db…a2c3b4 dirty=18.49KiB
+INFO [04-11|14:40:24.495] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=10.083ms  mgasps=0.000 number=24 hash=debea3…6f8e39 dirty=19.20KiB
+INFO [04-11|14:40:25.495] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=3.951ms   mgasps=0.000 number=25 hash=0ce31b…3ab645 dirty=19.44KiB
+INFO [04-11|14:40:26.620] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.227ms   mgasps=0.000 number=26 hash=a22555…80b81b dirty=19.91KiB
+INFO [04-11|14:40:28.434] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.422ms   mgasps=0.000 number=27 hash=7e3069…52023c dirty=20.15KiB
+INFO [04-11|14:40:29.455] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.505ms   mgasps=0.000 number=28 hash=c71727…47f45d dirty=20.63KiB
+INFO [04-11|14:40:29.680] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.165ms   mgasps=0.000 number=29 hash=f70e6d…2f9e9b dirty=21.10KiB
+INFO [04-11|14:40:29.896] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.825ms   mgasps=0.000 number=28 hash=2cea6b…3c517c dirty=21.34KiB
+INFO [04-11|14:40:30.519] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=11.456ms  mgasps=0.000 number=30 hash=bcdf4d…42d525 dirty=22.05KiB
+INFO [04-11|14:40:31.279] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=3.966ms   mgasps=0.000 number=31 hash=d0e908…402f46 dirty=22.52KiB
+INFO [04-11|14:40:33.028] Looking for peers                        peercount=1 tried=1 static=0
+INFO [04-11|14:40:33.392] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.655ms   mgasps=0.000 number=32 hash=6e926e…686b8d dirty=23.00KiB
+INFO [04-11|14:40:33.436] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.931ms   mgasps=0.000 number=33 hash=04415a…0808fd dirty=23.47KiB
+INFO [04-11|14:40:33.619] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.432ms   mgasps=0.000 number=34 hash=d0197e…83a0a7 dirty=23.95KiB
+INFO [04-11|14:40:33.619] Mining too far in the future             wait=2s
+INFO [04-11|14:40:35.879] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.743ms   mgasps=0.000 number=35 hash=8d8b88…258349 dirty=24.42KiB
+INFO [04-11|14:40:37.037] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.408ms   mgasps=0.000 number=36 hash=a6e95d…61151c dirty=24.89KiB
+INFO [04-11|14:40:37.838] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=8.080ms   mgasps=0.000 number=37 hash=69d5e2…71b86c dirty=25.37KiB
+INFO [04-11|14:40:38.668] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.904ms   mgasps=0.000 number=38 hash=3e2a38…a9498b dirty=25.84KiB
+INFO [04-11|14:40:39.665] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.482ms   mgasps=0.000 number=39 hash=c99029…b5ecf8 dirty=26.32KiB
+INFO [04-11|14:40:40.035] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=3.849ms   mgasps=0.000 number=40 hash=786db0…5edceb dirty=26.79KiB
+INFO [04-11|14:40:41.572] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=3.786ms   mgasps=0.000 number=41 hash=7800f8…a9c6cb dirty=27.27KiB
+INFO [04-11|14:40:41.966] Chain reorg detected                     number=40 hash=786db0…5edceb drop=1  dropfrom=7800f8…a9c6cb add=1  addfrom=3862e8…dcf65e
+INFO [04-11|14:40:41.966] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.698ms   mgasps=0.000 number=41 hash=3862e8…dcf65e dirty=27.74KiB
+INFO [04-11|14:40:42.156] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=10.295ms  mgasps=0.000 number=42 hash=743db4…2b6012 dirty=28.45KiB
+INFO [04-11|14:40:43.236] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.398ms   mgasps=0.000 number=43 hash=d67ed8…73f593 dirty=28.93KiB
+INFO [04-11|14:40:43.515] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.079ms   mgasps=0.000 number=44 hash=c43dd4…e50ae3 dirty=29.40KiB
+INFO [04-11|14:40:43.515] Mining too far in the future             wait=2s
+INFO [04-11|14:40:46.908] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.472ms   mgasps=0.000 number=45 hash=62e4ca…d1e832 dirty=29.88KiB
+INFO [04-11|14:40:47.507] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.736ms   mgasps=0.000 number=46 hash=e03203…b50f3e dirty=30.35KiB
+INFO [04-11|14:40:49.225] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.570ms   mgasps=0.000 number=47 hash=6361f8…4468f8 dirty=30.83KiB
+INFO [04-11|14:40:51.668] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.417ms   mgasps=0.000 number=48 hash=f04f8e…9e9b1c dirty=31.30KiB
+INFO [04-11|14:40:52.537] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.669ms   mgasps=0.000 number=49 hash=205afd…a38d0c dirty=31.78KiB
+INFO [04-11|14:40:54.390] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.504ms   mgasps=0.000 number=50 hash=0aa4cd…ca317f dirty=32.25KiB
+INFO [04-11|14:40:54.396] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.554ms   mgasps=0.000 number=51 hash=ad9b9b…fb15d4 dirty=32.73KiB
+INFO [04-11|14:40:54.567] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.540ms   mgasps=0.000 number=52 hash=ba9058…88726c dirty=33.20KiB
+INFO [04-11|14:40:54.567] Mining too far in the future             wait=2s
+INFO [04-11|14:40:55.439] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.289ms   mgasps=0.000 number=53 hash=af6844…e1ccb5 dirty=33.67KiB
+INFO [04-11|14:40:57.091] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.724ms   mgasps=0.000 number=54 hash=30730e…c5e96f dirty=34.15KiB
+INFO [04-11|14:40:57.598] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.533ms   mgasps=0.000 number=55 hash=9e20f8…35b1b0 dirty=34.62KiB
+INFO [04-11|14:40:57.598] Mining too far in the future             wait=2s
+INFO [04-11|14:40:59.980] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.842ms   mgasps=0.000 number=56 hash=81d7bf…1c9c42 dirty=35.10KiB
+INFO [04-11|14:41:00.400] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.609ms   mgasps=0.000 number=57 hash=3965f8…66d4cc dirty=35.57KiB
+INFO [04-11|14:41:01.898] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.645ms   mgasps=0.000 number=58 hash=bbb794…f6c93f dirty=36.05KiB
+INFO [04-11|14:41:01.904] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.158ms   mgasps=0.000 number=59 hash=6b36ce…7ccc2e dirty=36.52KiB
+INFO [04-11|14:41:01.904] Mining too far in the future             wait=2s
+INFO [04-11|14:41:02.899] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=3.187ms   mgasps=0.000 number=59 hash=b8cadc…5c5dee dirty=37.00KiB
+INFO [04-11|14:41:05.517] Chain reorg detected                     number=58 hash=bbb794…f6c93f drop=1  dropfrom=6b36ce…7ccc2e add=2  addfrom=1d4cb2…201c15
+INFO [04-11|14:41:05.517] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.472ms   mgasps=0.000 number=60 hash=1d4cb2…201c15 dirty=37.47KiB
+INFO [04-11|14:41:05.538] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=16.192ms  mgasps=0.000 number=61 hash=3b4506…92e7d0 dirty=38.18KiB
+INFO [04-11|14:41:06.053] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.007ms   mgasps=0.000 number=62 hash=c85ec3…670186 dirty=38.66KiB
+INFO [04-11|14:41:06.488] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=10.345ms  mgasps=0.000 number=63 hash=2e5e7c…84750b dirty=39.13KiB
+INFO [04-11|14:41:08.363] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.668ms   mgasps=0.000 number=64 hash=bc6a47…d8aa75 dirty=39.61KiB
+INFO [04-11|14:41:10.129] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.452ms   mgasps=0.000 number=65 hash=c4cafc…6593c4 dirty=40.08KiB
+INFO [04-11|14:41:10.521] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.876ms   mgasps=0.000 number=66 hash=b19f3b…5cb848 dirty=40.56KiB
+INFO [04-11|14:41:10.534] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.828ms   mgasps=0.000 number=67 hash=406338…4fd05a dirty=41.03KiB
+INFO [04-11|14:41:11.525] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.197ms   mgasps=0.000 number=67 hash=20b02f…c4a948 dirty=41.51KiB
+INFO [04-11|14:41:12.744] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=10.100ms  mgasps=0.000 number=68 hash=c27943…92df41 dirty=42.22KiB
+INFO [04-11|14:41:14.839] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.818ms   mgasps=0.000 number=69 hash=fa8e84…7098da dirty=42.69KiB
+INFO [04-11|14:41:15.819] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.397ms   mgasps=0.000 number=70 hash=f3ce53…a4b81f dirty=43.17KiB
+INFO [04-11|14:41:16.109] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.974ms   mgasps=0.000 number=70 hash=1c5450…fb8bd9 dirty=43.64KiB
+INFO [04-11|14:41:17.008] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=9.641ms   mgasps=0.000 number=71 hash=dd7a43…feecb9 dirty=44.35KiB
+INFO [04-11|14:41:17.349] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.747ms   mgasps=0.000 number=72 hash=d8ebe2…f7fda3 dirty=44.83KiB
+INFO [04-11|14:41:18.945] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.745ms   mgasps=0.000 number=73 hash=9f6de2…a23d1c dirty=45.30KiB
+INFO [04-11|14:41:22.532] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=7.196ms   mgasps=0.000 number=74 hash=8ee18f…4fb80b dirty=45.78KiB
+INFO [04-11|14:41:23.945] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.328ms   mgasps=0.000 number=75 hash=da9532…0f593e dirty=46.25KiB
+INFO [04-11|14:41:25.451] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.232ms   mgasps=0.000 number=76 hash=678076…68e04e dirty=46.73KiB
+INFO [04-11|14:41:25.989] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.823ms   mgasps=0.000 number=77 hash=705fa9…2c3e12 dirty=47.20KiB
+INFO [04-11|14:41:26.034] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.147ms   mgasps=0.000 number=78 hash=096fc3…5b885d dirty=47.68KiB
+INFO [04-11|14:41:26.505] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.836ms   mgasps=0.000 number=79 hash=546f61…006c78 dirty=48.15KiB
+INFO [04-11|14:41:26.505] Mining too far in the future             wait=2s
+INFO [04-11|14:41:28.115] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=3.197ms   mgasps=0.000 number=80 hash=fc5d38…90fab5 dirty=48.62KiB
+INFO [04-11|14:41:28.821] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=3.231ms   mgasps=0.000 number=81 hash=27cee2…cdd064 dirty=49.10KiB
+INFO [04-11|14:41:28.821] Mining too far in the future             wait=2s
+INFO [04-11|14:41:31.263] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.058ms   mgasps=0.000 number=82 hash=cb57d2…d35d28 dirty=49.57KiB
+INFO [04-11|14:41:31.287] Chain reorg detected                     number=81 hash=27cee2…cdd064 drop=1  dropfrom=cb57d2…d35d28 add=1  addfrom=d9117e…d943b2
+INFO [04-11|14:41:31.287] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.253ms   mgasps=0.000 number=82 hash=d9117e…d943b2 dirty=50.05KiB
+INFO [04-11|14:41:31.359] Chain reorg detected                     number=81 hash=27cee2…cdd064 drop=1  dropfrom=d9117e…d943b2 add=2  addfrom=87920b…5c64ec
+INFO [04-11|14:41:31.360] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.631ms   mgasps=0.000 number=83 hash=87920b…5c64ec dirty=50.52KiB
+INFO [04-11|14:41:31.798] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.346ms   mgasps=0.000 number=84 hash=cb793f…424c62 dirty=51.00KiB
+INFO [04-11|14:41:31.798] Mining too far in the future             wait=2s
+INFO [04-11|14:41:32.067] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=12.175ms  mgasps=0.000 number=83 hash=5a407d…216c46 dirty=51.71KiB
+INFO [04-11|14:41:32.819] Chain reorg detected                     number=81 hash=27cee2…cdd064 drop=3  dropfrom=cb793f…424c62 add=3  addfrom=7cf2b6…751123
+INFO [04-11|14:41:32.819] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.362ms   mgasps=0.000 number=84 hash=7cf2b6…751123 dirty=52.18KiB
+INFO [04-11|14:41:33.577] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.560ms   mgasps=0.000 number=85 hash=92d6e5…9a48cc dirty=52.66KiB
+INFO [04-11|14:41:34.479] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.810ms   mgasps=0.000 number=86 hash=090646…86d5b2 dirty=53.13KiB
+INFO [04-11|14:41:35.847] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=3.869ms   mgasps=0.000 number=87 hash=cc7402…4a8dc7 dirty=53.61KiB
+INFO [04-11|14:41:35.998] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=3.831ms   mgasps=0.000 number=88 hash=101e4e…1ae4c7 dirty=54.08KiB
+INFO [04-11|14:41:35.998] Mining too far in the future             wait=2s
+INFO [04-11|14:41:36.526] Chain reorg detected                     number=87 hash=cc7402…4a8dc7 drop=1  dropfrom=101e4e…1ae4c7 add=1  addfrom=7d34ad…f94868
+INFO [04-11|14:41:36.526] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=3.610ms   mgasps=0.000 number=88 hash=7d34ad…f94868 dirty=54.56KiB
+INFO [04-11|14:41:37.868] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=10.234ms  mgasps=0.000 number=89 hash=6c4ac0…607573 dirty=55.27KiB
+INFO [04-11|14:41:38.326] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.683ms   mgasps=0.000 number=90 hash=201290…3d1aef dirty=55.74KiB
+INFO [04-11|14:41:38.863] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.212ms   mgasps=0.000 number=91 hash=c71470…686387 dirty=56.22KiB
+INFO [04-11|14:41:38.863] Mining too far in the future             wait=2s
+INFO [04-11|14:41:41.044] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.722ms   mgasps=0.000 number=92 hash=6d50c6…7b8d67 dirty=56.69KiB
+INFO [04-11|14:41:43.649] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.013ms   mgasps=0.000 number=93 hash=44c6dd…af5872 dirty=57.17KiB
+INFO [04-11|14:41:44.901] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.160ms   mgasps=0.000 number=94 hash=a4ecde…32fd04 dirty=57.64KiB
+INFO [04-11|14:41:45.035] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.385ms   mgasps=0.000 number=95 hash=db565f…e33f47 dirty=58.12KiB
+INFO [04-11|14:41:46.166] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.632ms   mgasps=0.000 number=96 hash=a066c1…1dd382 dirty=58.59KiB
+INFO [04-11|14:41:46.368] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.444ms   mgasps=0.000 number=97 hash=7dc53c…437eba dirty=59.07KiB
+INFO [04-11|14:41:46.705] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.430ms   mgasps=0.000 number=98 hash=2bdcc7…7a2a3a dirty=59.54KiB
+INFO [04-11|14:41:46.705] Mining too far in the future             wait=2s
+INFO [04-11|14:41:47.544] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=3.435ms   mgasps=0.000 number=99 hash=00f7ff…46d3cb dirty=60.02KiB
+INFO [04-11|14:41:49.932] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.378ms   mgasps=0.000 number=100 hash=7074cb…d99b1c dirty=60.49KiB
+INFO [04-11|14:41:51.678] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.946ms   mgasps=0.000 number=101 hash=b2908e…11b2be dirty=60.96KiB
+INFO [04-11|14:41:54.993] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.858ms   mgasps=0.000 number=102 hash=671738…df2426 dirty=61.44KiB
+INFO [04-11|14:41:55.037] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.110ms   mgasps=0.000 number=102 hash=350229…0c07c3 dirty=61.91KiB
+INFO [04-11|14:41:55.538] Chain reorg detected                     number=101 hash=b2908e…11b2be drop=1  dropfrom=671738…df2426 add=2  addfrom=f75610…39e70e
+INFO [04-11|14:41:55.538] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=11.271ms  mgasps=0.000 number=103 hash=f75610…39e70e dirty=62.63KiB
+INFO [04-11|14:41:55.946] Chain reorg detected                     number=101 hash=b2908e…11b2be drop=2  dropfrom=f75610…39e70e add=2  addfrom=df7562…5ed2d0
+INFO [04-11|14:41:55.946] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.698ms   mgasps=0.000 number=103 hash=df7562…5ed2d0 dirty=63.10KiB
+INFO [04-11|14:41:57.959] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=11.141ms  mgasps=0.000 number=104 hash=47e124…f0cce3 dirty=63.81KiB
+INFO [04-11|14:41:57.998] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.937ms   mgasps=0.000 number=105 hash=50aa7f…d2500a dirty=64.29KiB
+INFO [04-11|14:41:58.257] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.574ms   mgasps=0.000 number=106 hash=62c31f…fa7753 dirty=64.76KiB
+INFO [04-11|14:41:58.898] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.048ms   mgasps=0.000 number=107 hash=4e5e1b…34b3eb dirty=65.24KiB
+INFO [04-11|14:41:58.898] Mining too far in the future             wait=2s
+INFO [04-11|14:41:59.110] Chain reorg detected                     number=106 hash=62c31f…fa7753 drop=1  dropfrom=4e5e1b…34b3eb add=1  addfrom=ccfef3…6aff5a
+INFO [04-11|14:41:59.110] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.845ms   mgasps=0.000 number=107 hash=ccfef3…6aff5a dirty=65.71KiB
+INFO [04-11|14:42:01.808] Chain reorg detected                     number=106 hash=62c31f…fa7753 drop=1  dropfrom=ccfef3…6aff5a add=2  addfrom=90013c…32ae1f
+INFO [04-11|14:42:01.808] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=10.081ms  mgasps=0.000 number=108 hash=90013c…32ae1f dirty=66.42KiB
+INFO [04-11|14:42:02.355] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.142ms   mgasps=0.000 number=109 hash=97a6d5…ced5ed dirty=66.90KiB
+INFO [04-11|14:42:02.467] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.744ms   mgasps=0.000 number=110 hash=f680df…9aad3b dirty=67.37KiB
+INFO [04-11|14:42:05.375] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.968ms   mgasps=0.000 number=111 hash=fd0e8d…bd15d0 dirty=67.85KiB
+INFO [04-11|14:42:06.860] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.230ms   mgasps=0.000 number=112 hash=9c5447…f841d9 dirty=68.32KiB
+INFO [04-11|14:42:06.981] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.835ms   mgasps=0.000 number=113 hash=48622a…75cd4c dirty=68.80KiB
+INFO [04-11|14:42:07.257] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=7.305ms   mgasps=0.000 number=114 hash=302790…9d819b dirty=69.27KiB
+INFO [04-11|14:42:11.330] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.001ms   mgasps=0.000 number=115 hash=18e7cf…aaf578 dirty=69.75KiB
+INFO [04-11|14:42:11.390] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.125ms   mgasps=0.000 number=116 hash=03b64d…f9c652 dirty=70.22KiB
+INFO [04-11|14:42:12.657] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.050ms   mgasps=0.000 number=117 hash=cf0d52…818c5b dirty=70.69KiB
+INFO [04-11|14:42:13.568] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.419ms   mgasps=0.000 number=118 hash=a19564…6a1025 dirty=71.17KiB
+INFO [04-11|14:42:15.747] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.666ms   mgasps=0.000 number=119 hash=f675d0…3b1105 dirty=71.64KiB
+INFO [04-11|14:42:15.757] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.255ms   mgasps=0.000 number=120 hash=e3770e…e4ed37 dirty=72.12KiB
+INFO [04-11|14:42:15.843] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.595ms   mgasps=0.000 number=121 hash=9a506e…d97ed7 dirty=72.59KiB
+INFO [04-11|14:42:15.843] Mining too far in the future             wait=2s
+INFO [04-11|14:42:19.235] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=10.361ms  mgasps=0.000 number=122 hash=7d2432…45f3f5 dirty=73.07KiB
+INFO [04-11|14:42:20.956] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.693ms   mgasps=0.000 number=123 hash=08d0c9…9b0537 dirty=73.54KiB
+INFO [04-11|14:42:21.445] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=7.245ms   mgasps=0.000 number=124 hash=bef226…af8d97 dirty=74.02KiB
+INFO [04-11|14:42:22.158] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.260ms   mgasps=0.000 number=125 hash=e184c7…29a04c dirty=74.49KiB
+INFO [04-11|14:42:22.576] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.800ms   mgasps=0.000 number=126 hash=fe7659…12eea2 dirty=74.97KiB
+INFO [04-11|14:42:22.583] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.398ms   mgasps=0.000 number=127 hash=0acf50…4eb1ec dirty=75.44KiB
+INFO [04-11|14:42:22.583] Mining too far in the future             wait=2s
+INFO [04-11|14:42:25.186] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.648ms   mgasps=0.000 number=128 hash=eca4fd…950ad0 dirty=75.92KiB
+INFO [04-11|14:42:25.349] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.060ms   mgasps=0.000 number=129 hash=8e99f0…dc2739 dirty=75.92KiB
+INFO [04-11|14:42:26.283] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.561ms   mgasps=0.000 number=130 hash=415120…0d3a29 dirty=75.92KiB
+INFO [04-11|14:42:27.650] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.384ms   mgasps=0.000 number=131 hash=f9d69d…2d918c dirty=76.15KiB
+INFO [04-11|14:42:28.587] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=10.105ms  mgasps=0.000 number=132 hash=30a968…22e1f6 dirty=76.16KiB
+INFO [04-11|14:42:28.607] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.322ms   mgasps=0.000 number=131 hash=7c9944…82dca7 dirty=76.63KiB
+INFO [04-11|14:42:30.668] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.860ms   mgasps=0.000 number=133 hash=38a5f0…e7c1ef dirty=76.39KiB
+INFO [04-11|14:42:31.486] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.168ms   mgasps=0.000 number=134 hash=e1a3ce…5f4818 dirty=76.16KiB
+INFO [04-11|14:42:31.729] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.700ms   mgasps=0.000 number=135 hash=ed1818…4256c8 dirty=75.45KiB
+INFO [04-11|14:42:32.598] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.562ms   mgasps=0.000 number=136 hash=a6ec87…1f5723 dirty=75.21KiB
+INFO [04-11|14:42:35.393] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.861ms   mgasps=0.000 number=137 hash=f971ba…46dda2 dirty=74.98KiB
+INFO [04-11|14:42:36.576] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=7.138ms   mgasps=0.000 number=138 hash=9e5f0d…5ff5e4 dirty=74.74KiB
+INFO [04-11|14:42:36.788] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.838ms   mgasps=0.000 number=138 hash=5515fa…4fff92 dirty=75.21KiB
+INFO [04-11|14:42:37.352] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.529ms   mgasps=0.000 number=139 hash=39fa8f…6d86c8 dirty=74.74KiB
+INFO [04-11|14:42:37.875] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=10.423ms  mgasps=0.000 number=140 hash=1fa88d…890b69 dirty=74.50KiB
+INFO [04-11|14:42:38.269] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.070ms   mgasps=0.000 number=141 hash=64eb25…8500f3 dirty=74.03KiB
+INFO [04-11|14:42:38.563] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=9.002ms   mgasps=0.000 number=139 hash=e199a2…5829be dirty=74.74KiB
+INFO [04-11|14:42:38.647] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.379ms   mgasps=0.000 number=140 hash=b1c5b0…2fa34d dirty=75.21KiB
+INFO [04-11|14:42:39.247] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.307ms   mgasps=0.000 number=142 hash=a7c03e…8c3971 dirty=74.74KiB
+INFO [04-11|14:42:40.100] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.792ms   mgasps=0.000 number=143 hash=483a55…7c361a dirty=74.27KiB
+INFO [04-11|14:42:40.322] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.801ms   mgasps=0.000 number=141 hash=f32d30…fb5285 dirty=74.74KiB
+INFO [04-11|14:42:40.515] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.277ms   mgasps=0.000 number=142 hash=207bd1…83ee84 dirty=75.21KiB
+INFO [04-11|14:42:40.730] Chain reorg detected                     number=137 hash=f971ba…46dda2 drop=6  dropfrom=483a55…7c361a add=6  addfrom=4da1c5…f0055d
+INFO [04-11|14:42:40.731] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.338ms   mgasps=0.000 number=143 hash=4da1c5…f0055d dirty=75.69KiB
+INFO [04-11|14:42:40.731] Mining too far in the future             wait=2s
+INFO [04-11|14:42:40.825] Chain reorg detected                     number=137 hash=f971ba…46dda2 drop=6  dropfrom=4da1c5…f0055d add=7  addfrom=e9795e…263a54
+INFO [04-11|14:42:40.826] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=3.799ms   mgasps=0.000 number=144 hash=e9795e…263a54 dirty=75.21KiB
+INFO [04-11|14:42:42.927] Chain reorg detected                     number=137 hash=f971ba…46dda2 drop=7  dropfrom=e9795e…263a54 add=7  addfrom=581f8e…d19bbb
+INFO [04-11|14:42:42.927] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.131ms   mgasps=0.000 number=144 hash=581f8e…d19bbb dirty=75.69KiB
+INFO [04-11|14:42:43.797] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=7.295ms   mgasps=0.000 number=145 hash=a92187…cbf1e9 dirty=75.21KiB
+INFO [04-11|14:42:44.087] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.668ms   mgasps=0.000 number=146 hash=171703…aa1fee dirty=74.50KiB
+INFO [04-11|14:42:44.314] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.488ms   mgasps=0.000 number=147 hash=6179fd…695bba dirty=74.50KiB
+INFO [04-11|14:42:44.314] Mining too far in the future             wait=2s
+INFO [04-11|14:42:46.984] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.119ms   mgasps=0.000 number=147 hash=b41995…9b6f50 dirty=74.98KiB
+INFO [04-11|14:42:47.333] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=10.261ms  mgasps=0.000 number=148 hash=3e2cd2…5f206c dirty=75.45KiB
+INFO [04-11|14:42:47.841] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=19.891ms  mgasps=0.000 number=148 hash=cd67a6…61f1d8 dirty=76.17KiB
+INFO [04-11|14:42:49.017] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.261ms   mgasps=0.000 number=149 hash=093e2b…46f63b dirty=75.69KiB
+INFO [04-11|14:42:49.690] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.536ms   mgasps=0.000 number=150 hash=5cbf09…e90a75 dirty=75.22KiB
+INFO [04-11|14:42:52.341] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.418ms   mgasps=0.000 number=151 hash=0f7d31…44e5e9 dirty=74.98KiB
+INFO [04-11|14:42:52.759] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.684ms   mgasps=0.000 number=151 hash=f1fab9…2ea00f dirty=75.46KiB
+INFO [04-11|14:42:53.489] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=14.313ms  mgasps=0.000 number=152 hash=9352fb…ca4271 dirty=75.69KiB
+INFO [04-11|14:42:54.013] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.918ms   mgasps=0.000 number=153 hash=50bffb…b6be20 dirty=75.69KiB
+INFO [04-11|14:42:55.316] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.027ms   mgasps=0.000 number=154 hash=933e88…58a545 dirty=75.70KiB
+INFO [04-11|14:42:58.872] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.777ms   mgasps=0.000 number=155 hash=e25e3e…a438a5 dirty=75.93KiB
+INFO [04-11|14:42:59.052] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.678ms   mgasps=0.000 number=156 hash=1cef62…edbfba dirty=75.22KiB
+INFO [04-11|14:42:59.977] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=8.803ms   mgasps=0.000 number=157 hash=0adbff…eda4a1 dirty=74.99KiB
+INFO [04-11|14:43:00.788] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.090ms   mgasps=0.000 number=158 hash=9ed4cd…584512 dirty=74.99KiB
+INFO [04-11|14:43:01.467] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=13.284ms  mgasps=0.000 number=159 hash=4e7208…d3443a dirty=75.22KiB
+INFO [04-11|14:43:01.553] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.526ms   mgasps=0.000 number=158 hash=320886…7d206a dirty=75.70KiB
+INFO [04-11|14:43:04.069] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.429ms   mgasps=0.000 number=160 hash=ce0c44…9095dc dirty=75.70KiB
+INFO [04-11|14:43:04.574] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=10.131ms  mgasps=0.000 number=161 hash=5bbb84…97d38b dirty=75.70KiB
+INFO [04-11|14:43:04.972] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.965ms   mgasps=0.000 number=161 hash=cac092…6cdb68 dirty=76.17KiB
+INFO [04-11|14:43:06.391] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=11.208ms  mgasps=0.000 number=162 hash=ec72c7…b73d21 dirty=76.41KiB
+INFO [04-11|14:43:07.270] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.040ms   mgasps=0.000 number=163 hash=caa12f…777606 dirty=76.41KiB
+INFO [04-11|14:43:07.523] Chain reorg detected                     number=162 hash=ec72c7…b73d21 drop=1  dropfrom=caa12f…777606 add=1  addfrom=72c66d…fbb88e
+INFO [04-11|14:43:07.523] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.434ms   mgasps=0.000 number=163 hash=72c66d…fbb88e dirty=76.89KiB
+INFO [04-11|14:43:08.937] Chain reorg detected                     number=162 hash=ec72c7…b73d21 drop=1  dropfrom=72c66d…fbb88e add=2  addfrom=13c582…b2c794
+INFO [04-11|14:43:08.938] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=12.717ms  mgasps=0.000 number=164 hash=13c582…b2c794 dirty=77.12KiB
+INFO [04-11|14:43:09.047] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.033ms   mgasps=0.000 number=165 hash=dfedbd…002137 dirty=77.12KiB
+INFO [04-11|14:43:09.140] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.191ms   mgasps=0.000 number=165 hash=4e4176…7583c1 dirty=77.60KiB
+INFO [04-11|14:43:10.789] Chain reorg detected                     number=164 hash=13c582…b2c794 drop=1  dropfrom=dfedbd…002137 add=2  addfrom=db7bed…636269
+INFO [04-11|14:43:10.789] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=9.934ms   mgasps=0.000 number=166 hash=db7bed…636269 dirty=77.84KiB
+INFO [04-11|14:43:11.001] Chain reorg detected                     number=164 hash=13c582…b2c794 drop=2  dropfrom=db7bed…636269 add=2  addfrom=a14068…d070fb
+INFO [04-11|14:43:11.002] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=11.754ms  mgasps=0.000 number=166 hash=a14068…d070fb dirty=78.55KiB
+INFO [04-11|14:43:11.837] Chain reorg detected                     number=164 hash=13c582…b2c794 drop=2  dropfrom=a14068…d070fb add=3  addfrom=15abb5…358b6c
+INFO [04-11|14:43:11.837] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.915ms   mgasps=0.000 number=167 hash=15abb5…358b6c dirty=78.55KiB
+INFO [04-11|14:43:12.802] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.360ms   mgasps=0.000 number=168 hash=324990…a881a7 dirty=78.79KiB
+INFO [04-11|14:43:13.109] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.832ms   mgasps=0.000 number=169 hash=44491c…2ece0a dirty=77.84KiB
+INFO [04-11|14:43:13.849] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.430ms   mgasps=0.000 number=170 hash=bfe8d7…244537 dirty=77.84KiB
+INFO [04-11|14:43:13.849] Mining too far in the future             wait=2s
+INFO [04-11|14:43:14.696] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.746ms   mgasps=0.000 number=171 hash=184d70…65120c dirty=77.84KiB
+INFO [04-11|14:43:17.784] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.004ms   mgasps=0.000 number=172 hash=e39122…fbb9af dirty=77.84KiB
+INFO [04-11|14:43:17.982] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.445ms   mgasps=0.000 number=173 hash=f1876b…d426fb dirty=77.84KiB
+INFO [04-11|14:43:19.632] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.900ms   mgasps=0.000 number=174 hash=1de683…2e45f1 dirty=77.84KiB
+INFO [04-11|14:43:19.789] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.625ms   mgasps=0.000 number=175 hash=b8001c…038fde dirty=77.84KiB
+INFO [04-11|14:43:19.871] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.657ms   mgasps=0.000 number=176 hash=af82aa…f751cd dirty=77.84KiB
+INFO [04-11|14:43:19.871] Mining too far in the future             wait=2s
+INFO [04-11|14:43:19.881] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.122ms   mgasps=0.000 number=175 hash=d0a65f…e11eb6 dirty=78.31KiB
+INFO [04-11|14:43:22.197] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=12.803ms  mgasps=0.000 number=177 hash=b6f054…86ab40 dirty=78.55KiB
+INFO [04-11|14:43:22.386] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=11.887ms  mgasps=0.000 number=176 hash=876239…88103c dirty=79.26KiB
+INFO [04-11|14:43:22.523] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.087ms   mgasps=0.000 number=178 hash=0b3066…2561cb dirty=79.26KiB
+INFO [04-11|14:43:22.583] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.292ms   mgasps=0.000 number=179 hash=d77501…000ecb dirty=79.26KiB
+INFO [04-11|14:43:22.583] Mining too far in the future             wait=2s
+INFO [04-11|14:43:26.462] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.240ms   mgasps=0.000 number=177 hash=78155f…320c5b dirty=79.73KiB
+INFO [04-11|14:43:29.003] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.093ms   mgasps=0.000 number=178 hash=c95a67…a2c25d dirty=80.21KiB
+INFO [04-11|14:43:29.752] Chain reorg detected                     number=174 hash=1de683…2e45f1 drop=5  dropfrom=d77501…000ecb add=5  addfrom=92ba0e…a33eac
+INFO [04-11|14:43:29.753] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.308ms   mgasps=0.000 number=179 hash=92ba0e…a33eac dirty=80.68KiB
+INFO [04-11|14:43:30.004] Chain reorg detected                     number=174 hash=1de683…2e45f1 drop=5  dropfrom=92ba0e…a33eac add=6  addfrom=26b0a8…a4af15
+INFO [04-11|14:43:30.004] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.675ms   mgasps=0.000 number=180 hash=26b0a8…a4af15 dirty=80.68KiB
+INFO [04-11|14:43:30.045] Chain reorg detected                     number=174 hash=1de683…2e45f1 drop=6  dropfrom=26b0a8…a4af15 add=6  addfrom=6e2275…d75681
+INFO [04-11|14:43:30.045] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.831ms   mgasps=0.000 number=180 hash=6e2275…d75681 dirty=81.16KiB
+INFO [04-11|14:43:30.209] Chain reorg detected                     number=174 hash=1de683…2e45f1 drop=6  dropfrom=6e2275…d75681 add=7  addfrom=dde43a…7f4e52
+INFO [04-11|14:43:30.209] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.864ms   mgasps=0.000 number=181 hash=dde43a…7f4e52 dirty=81.16KiB
+INFO [04-11|14:43:30.397] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.487ms   mgasps=0.000 number=182 hash=6d105e…407b0a dirty=81.16KiB
+INFO [04-11|14:43:31.486] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.777ms   mgasps=0.000 number=181 hash=589b65…5cd605 dirty=81.63KiB
+INFO [04-11|14:43:31.945] Chain reorg detected                     number=174 hash=1de683…2e45f1 drop=8  dropfrom=6d105e…407b0a add=8  addfrom=85002d…66ba95
+INFO [04-11|14:43:31.945] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.428ms   mgasps=0.000 number=182 hash=85002d…66ba95 dirty=82.11KiB
+INFO [04-11|14:43:35.009] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.955ms   mgasps=0.000 number=183 hash=683a5d…095d71 dirty=82.11KiB
+INFO [04-11|14:43:35.871] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.447ms   mgasps=0.000 number=184 hash=d09524…33ebe8 dirty=82.11KiB
+INFO [04-11|14:43:37.630] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.144ms   mgasps=0.000 number=185 hash=ff61cd…b6fb74 dirty=82.11KiB
+INFO [04-11|14:43:37.635] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.342ms   mgasps=0.000 number=186 hash=216a83…c0c01b dirty=82.34KiB
+INFO [04-11|14:43:38.287] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.461ms   mgasps=0.000 number=187 hash=d84ef5…8acae0 dirty=81.63KiB
+INFO [04-11|14:43:40.422] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=11.216ms  mgasps=0.000 number=188 hash=190c64…388bf8 dirty=81.40KiB
+INFO [04-11|14:43:41.051] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.016ms   mgasps=0.000 number=189 hash=2976b5…e43836 dirty=81.40KiB
+INFO [04-11|14:43:41.812] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.687ms   mgasps=0.000 number=190 hash=a867d2…2ccbe1 dirty=81.40KiB
+INFO [04-11|14:43:41.886] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.973ms   mgasps=0.000 number=190 hash=eba38a…d2dcf7 dirty=81.87KiB
+INFO [04-11|14:43:42.033] Chain reorg detected                     number=189 hash=2976b5…e43836 drop=1  dropfrom=a867d2…2ccbe1 add=2  addfrom=fcf675…4264ff
+INFO [04-11|14:43:42.034] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=13.003ms  mgasps=0.000 number=191 hash=fcf675…4264ff dirty=81.87KiB
+INFO [04-11|14:43:45.026] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=12.760ms  mgasps=0.000 number=192 hash=899560…8e11bc dirty=81.87KiB
+INFO [04-11|14:43:45.342] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=10.074ms  mgasps=0.000 number=192 hash=7ffb36…b01897 dirty=82.58KiB
+INFO [04-11|14:43:46.928] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=11.840ms  mgasps=0.000 number=193 hash=1c7d29…c63027 dirty=82.82KiB
+INFO [04-11|14:43:49.150] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.379ms   mgasps=0.000 number=194 hash=99e6d7…cf139a dirty=83.06KiB
+INFO [04-11|14:43:50.183] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.268ms   mgasps=0.000 number=195 hash=09df88…428e1a dirty=82.11KiB
+INFO [04-11|14:43:50.487] Chain reorg detected                     number=194 hash=99e6d7…cf139a drop=1  dropfrom=09df88…428e1a add=1  addfrom=dc628d…26ef70
+INFO [04-11|14:43:50.488] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.338ms   mgasps=0.000 number=195 hash=dc628d…26ef70 dirty=82.58KiB
+INFO [04-11|14:43:50.686] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.602ms   mgasps=0.000 number=196 hash=c70692…da2f1e dirty=82.58KiB
+INFO [04-11|14:43:51.370] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=10.323ms  mgasps=0.000 number=197 hash=d03d95…67904a dirty=83.06KiB
+INFO [04-11|14:43:52.122] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.973ms   mgasps=0.000 number=198 hash=18f24d…9c713a dirty=82.11KiB
+INFO [04-11|14:43:52.948] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.093ms   mgasps=0.000 number=199 hash=64ae45…2f0b9e dirty=82.11KiB
+INFO [04-11|14:43:52.948] Mining too far in the future             wait=2s
+INFO [04-11|14:43:54.607] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=3.911ms   mgasps=0.000 number=200 hash=750ffd…e221c8 dirty=82.11KiB
+INFO [04-11|14:43:57.124] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.260ms   mgasps=0.000 number=201 hash=581348…e54472 dirty=82.11KiB
+INFO [04-11|14:43:58.978] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.397ms   mgasps=0.000 number=202 hash=e1761e…c36c4d dirty=82.11KiB
+INFO [04-11|14:43:59.372] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.688ms   mgasps=0.000 number=202 hash=783180…857370 dirty=82.58KiB
+INFO [04-11|14:44:00.603] Chain reorg detected                     number=201 hash=581348…e54472 drop=1  dropfrom=e1761e…c36c4d add=2  addfrom=21c0cf…d285bb
+INFO [04-11|14:44:00.603] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=11.245ms  mgasps=0.000 number=203 hash=21c0cf…d285bb dirty=82.82KiB
+INFO [04-11|14:44:01.335] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.765ms   mgasps=0.000 number=204 hash=b6b8ed…bc82fc dirty=82.82KiB
+INFO [04-11|14:44:03.443] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.191ms   mgasps=0.000 number=205 hash=2069c6…7f1994 dirty=82.82KiB
+INFO [04-11|14:44:04.737] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.297ms   mgasps=0.000 number=206 hash=9bdf17…15ae32 dirty=82.82KiB
+INFO [04-11|14:44:05.277] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.658ms   mgasps=0.000 number=206 hash=15810d…5febc0 dirty=83.29KiB
+INFO [04-11|14:44:07.172] Chain reorg detected                     number=205 hash=2069c6…7f1994 drop=1  dropfrom=9bdf17…15ae32 add=2  addfrom=e74d6e…b5b250
+INFO [04-11|14:44:07.172] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=10.037ms  mgasps=0.000 number=207 hash=e74d6e…b5b250 dirty=83.53KiB
+INFO [04-11|14:44:07.280] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.457ms   mgasps=0.000 number=208 hash=5c9f12…ee8fbf dirty=83.53KiB
+INFO [04-11|14:44:08.418] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.331ms   mgasps=0.000 number=209 hash=71435e…e46e93 dirty=83.77KiB
+INFO [04-11|14:44:09.279] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.544ms   mgasps=0.000 number=210 hash=dc7f2b…484781 dirty=83.06KiB
+INFO [04-11|14:44:10.634] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.474ms   mgasps=0.000 number=211 hash=09d7f2…9dd4c1 dirty=82.58KiB
+INFO [04-11|14:44:10.869] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.310ms   mgasps=0.000 number=212 hash=df04aa…9fd54f dirty=81.87KiB
+INFO [04-11|14:44:10.869] Mining too far in the future             wait=2s
+INFO [04-11|14:44:13.331] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.396ms   mgasps=0.000 number=213 hash=9bd96a…0d6d85 dirty=81.87KiB
+INFO [04-11|14:44:13.754] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.599ms   mgasps=0.000 number=214 hash=bb1e23…e1784a dirty=81.87KiB
+INFO [04-11|14:44:16.050] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.687ms   mgasps=0.000 number=215 hash=d2378a…d481e7 dirty=82.11KiB
+INFO [04-11|14:44:17.370] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.870ms   mgasps=0.000 number=216 hash=19316d…3d0a1a dirty=81.16KiB
+INFO [04-11|14:44:17.527] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.628ms   mgasps=0.000 number=216 hash=a19ee8…8642fb dirty=81.63KiB
+INFO [04-11|14:44:18.087] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=12.518ms  mgasps=0.000 number=217 hash=067cd6…9a99da dirty=81.87KiB
+INFO [04-11|14:44:18.572] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.132ms   mgasps=0.000 number=218 hash=c097a5…546d25 dirty=81.87KiB
+INFO [04-11|14:44:21.901] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.367ms   mgasps=0.000 number=219 hash=9102c0…57f7a2 dirty=81.87KiB
+INFO [04-11|14:44:22.634] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.122ms   mgasps=0.000 number=219 hash=4e956b…abdab5 dirty=82.34KiB
+INFO [04-11|14:44:23.272] Chain reorg detected                     number=218 hash=c097a5…546d25 drop=1  dropfrom=9102c0…57f7a2 add=2  addfrom=3065de…4c5d42
+INFO [04-11|14:44:23.272] Imported new chain segment               blocks=2 txs=0 mgas=0.000 elapsed=9.406ms   mgasps=0.000 number=221 hash=eb7c0a…8ec25f dirty=82.58KiB
+INFO [04-11|14:44:23.488] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.536ms   mgasps=0.000 number=222 hash=f2215e…c20d5e dirty=82.58KiB
+INFO [04-11|14:44:23.488] Mining too far in the future             wait=2s
+INFO [04-11|14:44:26.774] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.406ms   mgasps=0.000 number=223 hash=87ff56…a6fe5c dirty=82.58KiB
+INFO [04-11|14:44:26.888] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=7.012ms   mgasps=0.000 number=224 hash=0b43aa…a3ab92 dirty=82.58KiB
+INFO [04-11|14:44:27.978] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.815ms   mgasps=0.000 number=225 hash=358a97…dcc975 dirty=82.58KiB
+INFO [04-11|14:44:29.072] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.828ms   mgasps=0.000 number=226 hash=c05b16…1e9564 dirty=82.58KiB
+INFO [04-11|14:44:29.207] Chain reorg detected                     number=225 hash=358a97…dcc975 drop=1  dropfrom=c05b16…1e9564 add=1  addfrom=6790f4…ef6407
+INFO [04-11|14:44:29.207] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.688ms   mgasps=0.000 number=226 hash=6790f4…ef6407 dirty=83.06KiB
+INFO [04-11|14:44:31.290] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=12.485ms  mgasps=0.000 number=227 hash=e104a6…2804ac dirty=83.29KiB
+INFO [04-11|14:44:32.699] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.137ms   mgasps=0.000 number=228 hash=b1ed9d…e06e2e dirty=83.29KiB
+INFO [04-11|14:44:33.989] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.127ms   mgasps=0.000 number=229 hash=c3dd97…27d3ce dirty=83.53KiB
+INFO [04-11|14:44:35.877] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=7.364ms   mgasps=0.000 number=230 hash=39e4ac…fb827c dirty=82.82KiB
+INFO [04-11|14:44:36.760] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.706ms   mgasps=0.000 number=231 hash=55c0e0…4bf0f7 dirty=81.87KiB
+INFO [04-11|14:44:37.677] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.688ms   mgasps=0.000 number=232 hash=44b5a7…199b58 dirty=81.87KiB
+INFO [04-11|14:44:38.704] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.099ms   mgasps=0.000 number=233 hash=abf307…102c09 dirty=81.87KiB
+INFO [04-11|14:44:38.953] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.577ms   mgasps=0.000 number=234 hash=c2f6dc…76fee9 dirty=82.11KiB
+INFO [04-11|14:44:39.640] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.020ms   mgasps=0.000 number=235 hash=a4c5d4…696da3 dirty=81.16KiB
+INFO [04-11|14:44:40.836] Imported new chain segment               blocks=2 txs=0 mgas=0.000 elapsed=6.895ms   mgasps=0.000 number=237 hash=ee9bf7…802b08 dirty=81.16KiB
+INFO [04-11|14:44:40.836] Mining too far in the future             wait=2s
+INFO [04-11|14:44:43.010] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.613ms   mgasps=0.000 number=238 hash=bcca56…b6bdc8 dirty=81.16KiB
+INFO [04-11|14:44:44.080] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.224ms   mgasps=0.000 number=239 hash=291ca4…ec5b9b dirty=81.16KiB
+INFO [04-11|14:44:45.247] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.582ms   mgasps=0.000 number=240 hash=cb6035…a79cb4 dirty=81.16KiB
+INFO [04-11|14:44:46.996] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.981ms   mgasps=0.000 number=241 hash=096407…080c1a dirty=81.16KiB
+INFO [04-11|14:44:47.904] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.788ms   mgasps=0.000 number=242 hash=4a2eb2…01f9a3 dirty=81.16KiB
+INFO [04-11|14:44:48.104] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.379ms   mgasps=0.000 number=243 hash=20d0e6…a4c598 dirty=81.16KiB
+INFO [04-11|14:44:48.586] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.998ms   mgasps=0.000 number=244 hash=c7ce3a…5cc17d dirty=81.16KiB
+INFO [04-11|14:44:50.814] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.112ms   mgasps=0.000 number=245 hash=e75d88…fc6cfd dirty=81.16KiB
+INFO [04-11|14:44:52.024] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.718ms   mgasps=0.000 number=246 hash=c7052f…909b5d dirty=81.16KiB
+INFO [04-11|14:44:52.903] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.535ms   mgasps=0.000 number=247 hash=3f3270…774392 dirty=81.16KiB
+INFO [04-11|14:44:53.501] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.491ms   mgasps=0.000 number=248 hash=69cdda…27c35d dirty=81.16KiB
+INFO [04-11|14:44:53.925] Chain reorg detected                     number=247 hash=3f3270…774392 drop=1  dropfrom=69cdda…27c35d add=1  addfrom=ddc0a5…117d30
+INFO [04-11|14:44:53.925] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.966ms   mgasps=0.000 number=248 hash=ddc0a5…117d30 dirty=81.63KiB
+INFO [04-11|14:44:53.975] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.864ms   mgasps=0.000 number=249 hash=db8882…4fd4b4 dirty=81.63KiB
+INFO [04-11|14:44:53.975] Mining too far in the future             wait=2s
+INFO [04-11|14:44:54.670] Chain reorg detected                     number=247 hash=3f3270…774392 drop=2  dropfrom=db8882…4fd4b4 add=2  addfrom=aae86a…4a666d
+INFO [04-11|14:44:54.670] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=9.787ms   mgasps=0.000 number=249 hash=aae86a…4a666d dirty=82.34KiB
+INFO [04-11|14:44:54.888] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=3.444ms   mgasps=0.000 number=250 hash=a40ce4…f8130a dirty=82.34KiB
+INFO [04-11|14:44:56.665] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.474ms   mgasps=0.000 number=251 hash=c3c70c…391ce2 dirty=82.34KiB
+INFO [04-11|14:44:57.043] Chain reorg detected                     number=250 hash=a40ce4…f8130a drop=1  dropfrom=c3c70c…391ce2 add=1  addfrom=850d17…0c26ee
+INFO [04-11|14:44:57.044] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.938ms   mgasps=0.000 number=251 hash=850d17…0c26ee dirty=82.82KiB
+INFO [04-11|14:44:57.244] Chain reorg detected                     number=250 hash=a40ce4…f8130a drop=1  dropfrom=850d17…0c26ee add=2  addfrom=588f91…4d0116
+INFO [04-11|14:44:57.244] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=10.759ms  mgasps=0.000 number=252 hash=588f91…4d0116 dirty=82.82KiB
+INFO [04-11|14:44:58.302] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=11.194ms  mgasps=0.000 number=253 hash=73d2ef…1d7a6f dirty=83.06KiB
+INFO [04-11|14:44:58.507] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=18.813ms  mgasps=0.000 number=253 hash=d51e53…7d7d52 dirty=83.53KiB
+INFO [04-11|14:44:58.533] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.195ms   mgasps=0.000 number=254 hash=58e2f7…50ca00 dirty=83.53KiB
+INFO [04-11|14:44:58.533] Mining too far in the future             wait=2s
+INFO [04-11|14:45:00.178] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=9.295ms   mgasps=0.000 number=255 hash=a0ff68…19366c dirty=83.53KiB
+INFO [04-11|14:45:02.630] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.327ms   mgasps=0.000 number=256 hash=8ae0f7…fda981 dirty=83.53KiB
+INFO [04-11|14:45:02.994] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.880ms   mgasps=0.000 number=257 hash=7f1876…194fa4 dirty=83.53KiB
+INFO [04-11|14:45:05.002] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.027ms   mgasps=0.000 number=258 hash=a2eb8f…33e98c dirty=83.77KiB
+INFO [04-11|14:45:05.872] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.091ms   mgasps=0.000 number=259 hash=de87d0…149ddd dirty=82.82KiB
+INFO [04-11|14:45:06.961] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.968ms   mgasps=0.000 number=260 hash=41b206…d7f9bb dirty=82.82KiB
+INFO [04-11|14:45:09.290] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.988ms   mgasps=0.000 number=261 hash=c512b5…5c8989 dirty=82.82KiB
+INFO [04-11|14:45:10.380] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.805ms   mgasps=0.000 number=262 hash=7c3e7c…63f242 dirty=82.82KiB
+INFO [04-11|14:45:10.834] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.920ms   mgasps=0.000 number=263 hash=66febc…9baa20 dirty=82.82KiB
+INFO [04-11|14:45:10.959] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.382ms   mgasps=0.000 number=264 hash=771991…119515 dirty=82.82KiB
+INFO [04-11|14:45:10.959] Mining too far in the future             wait=2s
+INFO [04-11|14:45:11.982] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=3.631ms   mgasps=0.000 number=265 hash=d239c8…ca37fc dirty=83.06KiB
+INFO [04-11|14:45:14.372] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.205ms   mgasps=0.000 number=266 hash=50fead…059740 dirty=82.34KiB
+INFO [04-11|14:45:16.277] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.373ms   mgasps=0.000 number=267 hash=1bbd2f…a0f8ff dirty=81.63KiB
+INFO [04-11|14:45:17.356] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.977ms   mgasps=0.000 number=268 hash=27f69f…392820 dirty=81.16KiB
+INFO [04-11|14:45:18.426] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.873ms   mgasps=0.000 number=269 hash=75049e…0a4a1b dirty=80.68KiB
+INFO [04-11|14:45:19.273] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.126ms   mgasps=0.000 number=270 hash=69732c…9aabae dirty=80.21KiB
+INFO [04-11|14:45:21.372] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.366ms   mgasps=0.000 number=271 hash=fa763c…a2511c dirty=79.73KiB
+INFO [04-11|14:45:21.777] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.935ms   mgasps=0.000 number=272 hash=49201d…05f463 dirty=79.02KiB
+INFO [04-11|14:45:22.866] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.159ms   mgasps=0.000 number=273 hash=6b3e71…9f4970 dirty=79.02KiB
+INFO [04-11|14:45:23.920] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.941ms   mgasps=0.000 number=274 hash=524234…1cdaaf dirty=79.26KiB
+INFO [04-11|14:45:25.565] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=7.369ms   mgasps=0.000 number=275 hash=c25bd4…430bc8 dirty=78.31KiB
+INFO [04-11|14:45:26.357] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.586ms   mgasps=0.000 number=276 hash=20f689…10fa0f dirty=77.60KiB
+INFO [04-11|14:45:26.404] Chain reorg detected                     number=275 hash=c25bd4…430bc8 drop=1  dropfrom=20f689…10fa0f add=1  addfrom=bd8887…b9bb06
+INFO [04-11|14:45:26.404] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.468ms   mgasps=0.000 number=276 hash=bd8887…b9bb06 dirty=78.07KiB
+INFO [04-11|14:45:27.278] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=9.461ms   mgasps=0.000 number=277 hash=555977…f6d595 dirty=78.31KiB
+INFO [04-11|14:45:30.296] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.482ms   mgasps=0.000 number=278 hash=1604c5…a07681 dirty=78.55KiB
+INFO [04-11|14:45:30.539] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.367ms   mgasps=0.000 number=279 hash=7ab5a2…85c057 dirty=77.60KiB
+INFO [04-11|14:45:31.726] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.561ms   mgasps=0.000 number=280 hash=9e4b47…255307 dirty=77.60KiB
+INFO [04-11|14:45:31.951] Chain reorg detected                     number=279 hash=7ab5a2…85c057 drop=1  dropfrom=9e4b47…255307 add=1  addfrom=b14b1e…f682e8
+INFO [04-11|14:45:31.952] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.379ms   mgasps=0.000 number=280 hash=b14b1e…f682e8 dirty=78.07KiB
+INFO [04-11|14:45:31.958] Chain reorg detected                     number=279 hash=7ab5a2…85c057 drop=1  dropfrom=b14b1e…f682e8 add=2  addfrom=32f468…358d5d
+INFO [04-11|14:45:31.958] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.349ms   mgasps=0.000 number=281 hash=32f468…358d5d dirty=78.07KiB
+INFO [04-11|14:45:33.271] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=10.399ms  mgasps=0.000 number=282 hash=adde9e…92ab11 dirty=78.31KiB
+INFO [04-11|14:45:33.341] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.538ms   mgasps=0.000 number=283 hash=f4df3f…26ba28 dirty=78.31KiB
+INFO [04-11|14:45:34.243] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.674ms   mgasps=0.000 number=284 hash=edcaf9…8bf6ec dirty=78.31KiB
+INFO [04-11|14:45:35.294] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.241ms   mgasps=0.000 number=285 hash=e47571…f93f2e dirty=78.55KiB
+INFO [04-11|14:45:38.209] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.511ms   mgasps=0.000 number=286 hash=b0245a…3025b4 dirty=77.60KiB
+INFO [04-11|14:45:39.018] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.437ms   mgasps=0.000 number=287 hash=3a7005…bc8ff5 dirty=77.60KiB
+INFO [04-11|14:45:39.116] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.666ms   mgasps=0.000 number=288 hash=459260…2b0729 dirty=77.84KiB
+INFO [04-11|14:45:39.474] Chain reorg detected                     number=287 hash=3a7005…bc8ff5 drop=1  dropfrom=459260…2b0729 add=1  addfrom=e9eedd…143cdf
+INFO [04-11|14:45:39.474] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.930ms   mgasps=0.000 number=288 hash=e9eedd…143cdf dirty=78.31KiB
+INFO [04-11|14:45:40.541] Chain reorg detected                     number=287 hash=3a7005…bc8ff5 drop=1  dropfrom=e9eedd…143cdf add=2  addfrom=70a9ad…e4f413
+INFO [04-11|14:45:40.541] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=10.010ms  mgasps=0.000 number=289 hash=70a9ad…e4f413 dirty=77.60KiB
+INFO [04-11|14:45:41.677] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.994ms   mgasps=0.000 number=290 hash=cec0f1…9d5653 dirty=77.84KiB
+INFO [04-11|14:45:42.779] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=7.835ms   mgasps=0.000 number=291 hash=e8614c…c3b905 dirty=76.89KiB
+INFO [04-11|14:45:43.935] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.553ms   mgasps=0.000 number=292 hash=93d34c…d5f3bb dirty=77.12KiB
+INFO [04-11|14:45:44.629] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.351ms   mgasps=0.000 number=293 hash=53ee02…6578cc dirty=76.17KiB
+INFO [04-11|14:45:45.969] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.841ms   mgasps=0.000 number=294 hash=88f077…3b7bf4 dirty=75.46KiB
+INFO [04-11|14:45:46.622] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.935ms   mgasps=0.000 number=295 hash=0cde4e…1f557a dirty=75.46KiB
+INFO [04-11|14:45:48.340] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.640ms   mgasps=0.000 number=296 hash=9298a1…dbb406 dirty=75.46KiB
+INFO [04-11|14:45:50.188] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.248ms   mgasps=0.000 number=297 hash=6fc649…5f39ec dirty=75.46KiB
+INFO [04-11|14:45:51.076] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=8.327ms   mgasps=0.000 number=298 hash=99c73c…04d879 dirty=75.46KiB
+INFO [04-11|14:45:52.248] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.646ms   mgasps=0.000 number=299 hash=a5fdd2…d2ddab dirty=75.46KiB
+INFO [04-11|14:45:53.683] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.001ms   mgasps=0.000 number=300 hash=fff1a0…25b523 dirty=75.46KiB
+INFO [04-11|14:45:53.879] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.595ms   mgasps=0.000 number=300 hash=a5f893…5d1434 dirty=75.94KiB
+INFO [04-11|14:45:54.915] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=12.813ms  mgasps=0.000 number=301 hash=89af44…71f1fb dirty=76.17KiB
+INFO [04-11|14:45:55.274] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=15.417ms  mgasps=0.000 number=301 hash=3fecc7…a1c6ff dirty=76.89KiB
+INFO [04-11|14:45:55.517] Chain reorg detected                     number=299 hash=a5fdd2…d2ddab drop=2  dropfrom=89af44…71f1fb add=3  addfrom=2c8a3c…ba28d9
+INFO [04-11|14:45:55.518] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.308ms   mgasps=0.000 number=302 hash=2c8a3c…ba28d9 dirty=77.12KiB
+INFO [04-11|14:45:56.261] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.565ms   mgasps=0.000 number=303 hash=785328…2dfc69 dirty=76.41KiB
+INFO [04-11|14:45:56.559] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=3.578ms   mgasps=0.000 number=304 hash=7a7a0b…e28ce1 dirty=75.70KiB
+INFO [04-11|14:45:56.560] Mining too far in the future             wait=2s
+INFO [04-11|14:45:57.283] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.071ms   mgasps=0.000 number=304 hash=c80f4d…14d645 dirty=76.17KiB
+INFO [04-11|14:46:04.986] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=9.842ms   mgasps=0.000 number=305 hash=f4df40…9049e3 dirty=75.94KiB
+INFO [04-11|14:46:05.291] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.507ms   mgasps=0.000 number=306 hash=d0ebcc…54ccf8 dirty=75.46KiB
+INFO [04-11|14:46:05.297] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.399ms   mgasps=0.000 number=307 hash=fd3438…27b50e dirty=74.99KiB
+INFO [04-11|14:46:07.990] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.312ms   mgasps=0.000 number=308 hash=106b18…e087a5 dirty=74.51KiB
+INFO [04-11|14:46:08.609] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.701ms   mgasps=0.000 number=309 hash=f9bd53…0d72cc dirty=74.04KiB
+INFO [04-11|14:46:09.919] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.559ms   mgasps=0.000 number=310 hash=112845…94c19c dirty=73.33KiB
+INFO [04-11|14:46:11.774] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.693ms   mgasps=0.000 number=311 hash=354f8f…ea6eea dirty=73.33KiB
+INFO [04-11|14:46:12.223] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.659ms   mgasps=0.000 number=312 hash=c67d10…9c94c0 dirty=73.33KiB
+INFO [04-11|14:46:15.302] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=7.918ms   mgasps=0.000 number=313 hash=fd32dd…63b424 dirty=73.33KiB
+INFO [04-11|14:46:15.697] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=7.561ms   mgasps=0.000 number=314 hash=66f7b2…1389c8 dirty=73.33KiB
+INFO [04-11|14:46:16.161] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.446ms   mgasps=0.000 number=315 hash=8c4069…c71e30 dirty=73.33KiB
+INFO [04-11|14:46:16.508] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.259ms   mgasps=0.000 number=316 hash=69ec2f…68dfd6 dirty=73.33KiB
+INFO [04-11|14:46:16.508] Mining too far in the future             wait=2s
+INFO [04-11|14:46:18.811] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.407ms   mgasps=0.000 number=317 hash=e3df60…964df9 dirty=73.56KiB
+INFO [04-11|14:46:19.129] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.404ms   mgasps=0.000 number=317 hash=2975d5…a0333a dirty=74.04KiB
+INFO [04-11|14:46:23.916] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=12.907ms  mgasps=0.000 number=318 hash=8cd642…72afaa dirty=73.56KiB
+INFO [04-11|14:46:28.153] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.080ms   mgasps=0.000 number=319 hash=2955cd…d3bdf2 dirty=73.56KiB
+INFO [04-11|14:46:29.182] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=7.738ms   mgasps=0.000 number=320 hash=4fc569…db09e4 dirty=72.62KiB
+INFO [04-11|14:46:30.437] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.854ms   mgasps=0.000 number=321 hash=827809…13336b dirty=72.62KiB
+INFO [04-11|14:46:33.211] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.717ms   mgasps=0.000 number=322 hash=8edcbb…cb08fe dirty=72.85KiB
+INFO [04-11|14:46:33.411] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.610ms   mgasps=0.000 number=323 hash=55c1fa…eec8d3 dirty=72.14KiB
+INFO [04-11|14:46:33.437] Chain reorg detected                     number=322 hash=8edcbb…cb08fe drop=1  dropfrom=55c1fa…eec8d3 add=1  addfrom=bca8de…314da8
+INFO [04-11|14:46:33.438] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=6.216ms   mgasps=0.000 number=323 hash=bca8de…314da8 dirty=72.62KiB
+INFO [04-11|14:46:33.665] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=5.344ms   mgasps=0.000 number=324 hash=8e3243…008c9f dirty=72.38KiB
+INFO [04-11|14:46:34.410] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=11.768ms  mgasps=0.000 number=325 hash=bf4f39…006520 dirty=72.38KiB
+INFO [04-11|14:46:35.885] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=3.735ms   mgasps=0.000 number=326 hash=559d18…af97fd dirty=72.38KiB
+INFO [04-11|14:46:36.380] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.735ms   mgasps=0.000 number=327 hash=c09c63…5cf5f9 dirty=72.38KiB
+INFO [04-11|14:46:37.132] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=4.865ms   mgasps=0.000 number=327 hash=f2e544…1a24cd dirty=72.85KiB
+INFO [04-11|14:46:37.270] Chain reorg detected                     number=326 hash=559d18…af97fd drop=1  dropfrom=c09c63…5cf5f9 add=2  addfrom=fdf6ab…22e213
+INFO [04-11|14:46:37.270] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=9.902ms   mgasps=0.000 number=328 hash=fdf6ab…22e213 dirty=73.09KiB
+INFO [04-11|14:46:38.439] Got interrupt, shutting down... 
+INFO [04-11|14:46:38.439] IPC endpoint closed                      url=/root/ethData2/geth.ipc
+INFO [04-11|14:46:38.439] Writing cached state to disk             block=328 hash=fdf6ab…22e213 root=f57c53…b0696a
+INFO [04-11|14:46:38.439] Persisted trie from memory database      nodes=3 size=441.00B   time=110.812µs gcnodes=533 gcsize=76.49KiB gctime=1.162434ms livenodes=306 livesize=43.78KiB
+INFO [04-11|14:46:38.439] Writing cached state to disk             block=327 hash=f2e544…1a24cd root=1a2dd3…ea913c
+INFO [04-11|14:46:38.439] Persisted trie from memory database      nodes=3 size=441.00B   time=67.354µs  gcnodes=0   gcsize=0.00B    gctime=0s         livenodes=303 livesize=43.35KiB
+INFO [04-11|14:46:38.439] Writing cached state to disk             block=201 hash=581348…e54472 root=bf18c6…d34f6d
+INFO [04-11|14:46:38.439] Persisted trie from memory database      nodes=3 size=441.00B   time=52.496µs  gcnodes=0   gcsize=0.00B    gctime=0s         livenodes=300 livesize=42.92KiB
+INFO [04-11|14:46:38.441] Blockchain manager stopped 
+INFO [04-11|14:46:38.441] Stopping Ethereum protocol 
+INFO [04-11|14:46:38.441] Ethereum protocol stopped 
+INFO [04-11|14:46:38.441] Transaction pool stopped 
+INFO [04-11|14:46:38.441] Looking for peers                        peercount=0 tried=0 static=0

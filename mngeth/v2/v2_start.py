@@ -1,15 +1,17 @@
 from sys import modules
 from os import system
 from functools import partial
-from v2_topos import *
-from v2_config import conf
-from time import sleep, time
+from time import time, sleep
+
 from mininet.net import Mininet
 from mininet.node import CPULimitedHost
 from mininet.link import TCLink
 from mininet.util import dumpNodeConnections
 from mininet.log import setLogLevel
-from mininet.cli import CLI
+
+from v2_topos import *
+from v2_config import conf
+from geth import *
 
 
 def get_topology():
@@ -56,6 +58,14 @@ def test_topology(topo: Topo, net: Mininet):
 
 
 def main():
+    def delay_command(host, cmd, print=True):
+        sleep(0.1)
+        if print:
+            hs[host - 1].cmdPrint(cmd)
+        else:
+            hs[host - 1].cmd(cmd)
+        sleep(0.1)
+
     system('sudo mn --clean')
     setLogLevel('info')
 
@@ -72,8 +82,30 @@ def main():
         h.cmdPrint("cd ~")
         h.cmdPrint("ls")
 
+    delay_command(1, node_1_start)
+    delay_command(2, gen_enode)
+    delay_command(3, gen_enode)
+    delay_command(4, gen_enode)
+    delay_command(2, node_2_start)
+    delay_command(3, node_3_start)
+    delay_command(4, node_4_start)
+    delay_command(2, node_2_check_join)
+    delay_command(3, node_3_check_join)
+    delay_command(4, node_4_check_join)
+
+    time1 = time()
+    for i in range(300):
+        delay_command(1, node_1_check_blocks_alt, False)
+        delta = time() - time1
+        num = read_get_block()
+        throughput = num / delta
+        print("i =", i, "total # of blocks = ", num, "throughput = ", round(throughput, 2), "blocks/sec")
+        sleep(1)
+
+    time2 = time()
+    print("delta = ", time2 - time1)
     # enables client control
-    CLI(net)
+    # CLI(net)
 
     # stop the network
     net.stop()

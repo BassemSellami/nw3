@@ -3,8 +3,8 @@
 ##############################################################################
 #                             SEC 1. Python
 # NOTE: all YAML parameters are stored in variable conf as a Python dictionary
-# NOTE: conf.py reads the YAML file and parses arguments to native Python types (e.g. null -> None).
-# NOTE: conf.py preprocess parameters before sending to main.py, so add extra checking/parsing there.
+# NOTE: rmb_conf.py reads the YAML file and parses arguments to native Python types (e.g. null -> None).
+# NOTE: rmb_conf.py preprocess parameters before sending to main.py, so add extra checking/parsing there.
 ##############################################################################
 
 ##############################################################################
@@ -74,7 +74,7 @@ nw_topo:
 #    h: 1 # hosts / edge
 #  }
 
-# ex. 5 (should be defined in topos.py or a file imported by topos.py)
+# ex. 5 (should be defined in rmb_topos.py or a file imported by rmb_topos.py)
 #nw_topo:
 #  class: SingleSwitchTopoSlowH1
 #  args:

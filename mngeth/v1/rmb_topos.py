@@ -1,5 +1,5 @@
 from mininet.topo import Topo
-from conf import conf
+from v1.rmb_conf import conf
 
 
 def index_gen(prefix):

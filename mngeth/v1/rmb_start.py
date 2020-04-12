@@ -1,16 +1,15 @@
 from sys import modules
 from os import system
 from functools import partial
-from topos import *
-from geth import *
-from conf import conf
+from v1.rmb_topos import *
+from v2.geth import *
+from v1.rmb_conf import conf
 from time import sleep, time
 from mininet.net import Mininet
 from mininet.node import CPULimitedHost
 from mininet.link import TCLink
 from mininet.util import dumpNodeConnections
 from mininet.log import setLogLevel
-from mininet.cli import CLI
 
 
 def get_topology():
@@ -94,7 +93,7 @@ def main():
     delay_command(4, node_4_check_join)
 
     time1 = time()
-    for i in range(120):
+    for i in range(50):
         delay_command(1, node_1_check_blocks_alt, False)
         delta = time() - time1
         num = read_get_block()

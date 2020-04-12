@@ -1,6 +1,4 @@
-DIR=$(pwd)
 chmod 700 prerun.sh
 . prerun.sh
-cd $DIR
-python3 start.py
+python3 ./v2/v2_start.py
 killall geth

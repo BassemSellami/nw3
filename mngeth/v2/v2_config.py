@@ -1,7 +1,7 @@
 import yaml
 import pprint
 
-conf = yaml.load(open("v2_config.yaml"))["network"]
+conf = yaml.load(open("./v2/v2_config.yaml"))["network"]
 
 
 def process():

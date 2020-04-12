@@ -1,7 +1,7 @@
 import yaml
 import pprint
 
-conf = yaml.load(open("config.yaml"))
+conf = yaml.load(open("rmb_config.yaml"))
 
 
 def pre_process():
