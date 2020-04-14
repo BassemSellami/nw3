@@ -31,7 +31,7 @@ network:
 
   link:
     bw: null    # e.g., 100 (Mb/s)
-    delay: 10ms  # e.g., 1s, 1ms
+    delay: 500ms  # e.g., 1s, 1ms
     jitter: 10ms  # e.g., 1s, 1ms
     loss: null    # e.g.,1 (percent)
 
@@ -54,7 +54,7 @@ network:
 #
 #  link:
 #    bw: null    # e.g., 100 (Mb/s)
-#    delay: 10ms  # e.g., 1s, 1ms
+#    delay: 500ms  # e.g., 1s, 1ms
 #    jitter: 10ms  # e.g., 1s, 1ms
 #    loss: null    # e.g.,1 (percent)
 #
