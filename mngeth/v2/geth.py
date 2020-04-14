@@ -19,7 +19,8 @@ miner_thread = 1
 node_1_miner_base = "0x67e37abe6fb7bb2b0d61b9c6f53c71623ae65551"
 node_2_miner_base = "0x2dec65f7f6fecef9088afed7ab41ad0f1173ddb4"
 node_3_miner_base = "0x0213af577d12cf11a5baf5a869e0b1305684ca0a"
-node_4_miner_base = "0x7d8466475a66c4363da52494af4a3c20298f5f73"
+node_4_miner_base = "0x7d8466475a66c4363da52494af4a3c20298f5f73"  # shared miner base
+node_5_miner_base = "0x7d8466475a66c4363da52494af4a3c20298f5f73"
 
 gen_enode = (f"ENODE_ADDRESS=\"enode://$(bootnode -nodekey $DDR1/geth/nodekey -writeaddress)"
              f"@{node_1}:{bootnode_port}\"")
@@ -47,10 +48,17 @@ node_4_start = (
     f"--bootnodes $ENODE_ADDRESS "
     f"--mine --minerthreads={miner_thread} --etherbase={node_4_miner_base} "
     f"> ~/nw3/mngeth/data/nohup-{node_4}.out &")
+node_5_start = (
+    f"nohup {geth_bin_file} --datadir $DDR5 --networkid {network_id} --port {bootnode_port + 5} "
+    f"--nat extip:{node_5} --netrestrict 10.0.0.0/24 "
+    f"--bootnodes $ENODE_ADDRESS "
+    f"--mine --minerthreads={miner_thread} --etherbase={node_5_miner_base} "
+    f"> ~/nw3/mngeth/data/nohup-{node_5}.out &")
 
 node_2_check_join = f"{geth_bin_file} attach $DDR2/geth.ipc --exec admin.peers"
 node_3_check_join = f"{geth_bin_file} attach $DDR3/geth.ipc --exec admin.peers"
 node_4_check_join = f"{geth_bin_file} attach $DDR4/geth.ipc --exec admin.peers"
+node_5_check_join = f"{geth_bin_file} attach $DDR5/geth.ipc --exec admin.peers"
 
 node_1_check_blocks = (f"{geth_bin_file} attach $DDR1/geth.ipc "
                        f"--exec 'eth.getBlock(\"latest\")'")

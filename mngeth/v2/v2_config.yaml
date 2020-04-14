@@ -1,15 +1,38 @@
 # Configuration YAML v2
 
+#network:
+#  topo:
+#    class: SingleSwitchTopo
+#    args:
+#      - 4
+#
+#  link:
+#    bw: null    # e.g., 100 (Mb/s)
+#    delay: null  # e.g., 1s, 1ms
+#    jitter: null  # e.g., 1s, 1ms
+#    loss: null    # e.g.,1 (percent)
+#
+#  node:
+#    cpu: -1
+#    cores: null
+#
+#  test:
+#    iperf: -1
+
+
+# info: https://github.com/haochenpan/nw3/blob/57bd04294abaf5c9af5eedddc1ac7616f132ff3b/mngeth/config.yaml
+
 network:
   topo:
-    class: SingleSwitchTopo
+    class: LinearTopo
     args:
-      - 4
+      - 5
+      - 1
 
   link:
     bw: null    # e.g., 100 (Mb/s)
-    delay: null  # e.g., 1s, 1ms
-    jitter: null  # e.g., 1s, 1ms
+    delay: 10ms  # e.g., 1s, 1ms
+    jitter: 10ms  # e.g., 1s, 1ms
     loss: null    # e.g.,1 (percent)
 
   node:
@@ -20,5 +43,24 @@ network:
     iperf: -1
 
 
-
-
+#network:
+#  topo:
+#    class: FatTreeTopo
+#    args:
+#      - 3
+#      - 3
+#      - 5
+#      - 1
+#
+#  link:
+#    bw: null    # e.g., 100 (Mb/s)
+#    delay: 10ms  # e.g., 1s, 1ms
+#    jitter: 10ms  # e.g., 1s, 1ms
+#    loss: null    # e.g.,1 (percent)
+#
+#  node:
+#    cpu: -1
+#    cores: null
+#
+#  test:
+#    iperf: -1

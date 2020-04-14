@@ -73,8 +73,10 @@ def main():
     topo, net = get_topology()
     net.start()
 
+    # print("sleep 60 seconds for the links to be learned")
+    # sleep(60)
     # tests connections (include iperf)
-    test_topology(topo, net)
+    # test_topology(topo, net)
 
     hs = topo.hosts(sort=True)
     hs = [net.getNodeByName(h) for h in hs]
@@ -86,12 +88,15 @@ def main():
     delay_command(2, gen_enode)
     delay_command(3, gen_enode)
     delay_command(4, gen_enode)
+    delay_command(5, gen_enode)
     delay_command(2, node_2_start)
     delay_command(3, node_3_start)
     delay_command(4, node_4_start)
+    delay_command(5, node_5_start)
     delay_command(2, node_2_check_join)
     delay_command(3, node_3_check_join)
     delay_command(4, node_4_check_join)
+    delay_command(5, node_5_check_join)
 
     time1 = time()
     for i in range(300):

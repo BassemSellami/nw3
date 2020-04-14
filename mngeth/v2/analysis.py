@@ -126,6 +126,7 @@ def calculate_metrics(nodes, info_arr):
     # ...
     throughputs = [sys_tho]
     for miner in nodes:
+        print(miner)
         miner_first_valid, miner_last_valid = None, None
         miner_valid_count = 0
         for info in info_arr:
@@ -184,7 +185,7 @@ def report_metrics(nodes, rt, total_valid_count, throughputs, latencies):
 
 def main():
     # all nodes are miners
-    nodes = [f"10.0.0.{i}" for i in range(1, 5)]
+    nodes = [f"10.0.0.{i}" for i in range(1, 6)]
     raw_logs = [read_file(f"./data/nohup-{i}.out") for i in nodes]
     max_valid_block_num = find_max_valid_block(raw_logs) + 1
     histories = extract_history(nodes, raw_logs, max_valid_block_num)
