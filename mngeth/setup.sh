@@ -48,14 +48,14 @@ cd ..
 mininet/util/install.sh -a
 sudo mn --test pingall
 
-cd
-mkdir -p ethData1/keystore
-mkdir -p ethData2/keystore
-mkdir -p ethData3/keystore
-mkdir -p ethData4/keystore
-echo export DDR1=~/ethData1 >>~/.bashrc
-echo export DDR2=~/ethData2 >>~/.bashrc
-echo export DDR3=~/ethData3 >>~/.bashrc
-echo export DDR4=~/ethData4 >>~/.bashrc
-source ~/.bashrc
+#cd
+#mkdir -p ethData1/keystore
+#mkdir -p ethData2/keystore
+#mkdir -p ethData3/keystore
+#mkdir -p ethData4/keystore
+#echo export DDR1=~/ethData1 >>~/.bashrc
+#echo export DDR2=~/ethData2 >>~/.bashrc
+#echo export DDR3=~/ethData3 >>~/.bashrc
+#echo export DDR4=~/ethData4 >>~/.bashrc
+#source ~/.bashrc
 

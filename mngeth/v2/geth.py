@@ -1,75 +1,36 @@
-import json
+from sys import argv
 
-# node 1: full node (bootnode)
-# node 2: full node
-# node 3: miner 1
-# node 4: miner 2
-node_1 = "10.0.0.1"
-node_2 = "10.0.0.2"
-node_3 = "10.0.0.3"
-node_4 = "10.0.0.4"
-node_5 = "10.0.0.5"
-node_6 = "10.0.0.6"
-
-geth_bin_file = 'geth'
-
-bootnode_port = 30303
+num_of_miners = int(argv[1])
+miner_thread = 3
 network_id = 714715
-miner_thread = 1
-node_1_miner_base = "0x67e37abe6fb7bb2b0d61b9c6f53c71623ae65551"
-node_2_miner_base = "0x2dec65f7f6fecef9088afed7ab41ad0f1173ddb4"
-node_3_miner_base = "0x0213af577d12cf11a5baf5a869e0b1305684ca0a"
-node_4_miner_base = "0x7d8466475a66c4363da52494af4a3c20298f5f73"  # shared miner base
-node_5_miner_base = "0x7d8466475a66c4363da52494af4a3c20298f5f73"
+port = 30303
+
+nodes = [f"10.0.0.{i}" for i in range(1, num_of_miners + 1)]
+b1 = "0x67e37abe6fb7bb2b0d61b9c6f53c71623ae65551"
+b2 = "0x2dec65f7f6fecef9088afed7ab41ad0f1173ddb4"
+b3 = "0x0213af577d12cf11a5baf5a869e0b1305684ca0a"
+b4 = "0x7d8466475a66c4363da52494af4a3c20298f5f73"
+bases = [b1, b2, b3, b4]
 
 gen_enode = (f"ENODE_ADDRESS=\"enode://$(bootnode -nodekey $DDR1/geth/nodekey -writeaddress)"
-             f"@{node_1}:{bootnode_port}\"")
+             f"@{nodes[0]}:{port}\"")
 
 node_1_start = (
-    f"nohup {geth_bin_file} --datadir=$DDR1 --networkid {network_id} --port {bootnode_port} "
-    f"--nat extip:{node_1} --netrestrict 10.0.0.0/24 "
-    f"--mine --minerthreads={miner_thread} --etherbase={node_1_miner_base} "
-    f"> ~/nw3/mngeth/data/nohup-{node_1}.out &")
-node_2_start = (
-    f"nohup {geth_bin_file} --datadir $DDR2 --networkid {network_id} --port {bootnode_port + 1} "
-    f"--nat extip:{node_2} --netrestrict 10.0.0.0/24 "
-    f"--bootnodes $ENODE_ADDRESS "
-    f"--mine --minerthreads={miner_thread} --etherbase={node_2_miner_base} "
-    f"> ~/nw3/mngeth/data/nohup-{node_2}.out &")
-node_3_start = (
-    f"nohup {geth_bin_file} --datadir $DDR3 --networkid {network_id} --port {bootnode_port + 2} "
-    f"--nat extip:{node_3} --netrestrict 10.0.0.0/24 "
-    f"--bootnodes $ENODE_ADDRESS "
-    f"--mine --minerthreads={miner_thread} --etherbase={node_3_miner_base} "
-    f"> ~/nw3/mngeth/data/nohup-{node_3}.out &")
-node_4_start = (
-    f"nohup {geth_bin_file} --datadir $DDR4 --networkid {network_id} --port {bootnode_port + 3} "
-    f"--nat extip:{node_4} --netrestrict 10.0.0.0/24 "
-    f"--bootnodes $ENODE_ADDRESS "
-    f"--mine --minerthreads={miner_thread} --etherbase={node_4_miner_base} "
-    f"> ~/nw3/mngeth/data/nohup-{node_4}.out &")
-node_5_start = (
-    f"nohup {geth_bin_file} --datadir $DDR5 --networkid {network_id} --port {bootnode_port + 5} "
-    f"--nat extip:{node_5} --netrestrict 10.0.0.0/24 "
-    f"--bootnodes $ENODE_ADDRESS "
-    f"--mine --minerthreads={miner_thread} --etherbase={node_5_miner_base} "
-    f"> ~/nw3/mngeth/data/nohup-{node_5}.out &")
+    f"nohup geth --datadir=$DDR1 --networkid {network_id} --port {port} "
+    f"--nat extip:{nodes[0]} --netrestrict 10.0.0.0/24 "
+    f"--mine --minerthreads={miner_thread} --etherbase={bases[0]} "
+    f"> ~/nw3/mngeth/data/nohup-{nodes[0]}.out &")
+node_n_start = (
+    "nohup geth --datadir $DDR{n} --networkid {networkid} --port {port} "
+    "--nat extip:{ip} --netrestrict 10.0.0.0/24 "
+    "--bootnodes $ENODE_ADDRESS "
+    f"--mine --minerthreads={miner_thread} "
+    "--etherbase={etherbase} "
+    "> ~/nw3/mngeth/data/nohup-{ip}.out &")
+node_n_check_join = "geth attach $DDR{}/geth.ipc --exec admin.peers"
 
-node_2_check_join = f"{geth_bin_file} attach $DDR2/geth.ipc --exec admin.peers"
-node_3_check_join = f"{geth_bin_file} attach $DDR3/geth.ipc --exec admin.peers"
-node_4_check_join = f"{geth_bin_file} attach $DDR4/geth.ipc --exec admin.peers"
-node_5_check_join = f"{geth_bin_file} attach $DDR5/geth.ipc --exec admin.peers"
-
-node_1_check_blocks = (f"{geth_bin_file} attach $DDR1/geth.ipc "
-                       f"--exec 'eth.getBlock(\"latest\")'")
-node_2_check_blocks = (f"{geth_bin_file} attach $DDR2/geth.ipc "
-                       f"--exec 'eth.getBlock(\"latest\")'")
-node_3_check_mine = (f"{geth_bin_file} attach $DDR3/geth.ipc "
-                     f"--exec 'web3.fromWei(eth.getBalance(eth.coinbase), \"ether\")'")
-node_4_check_mine = (f"{geth_bin_file} attach $DDR4/geth.ipc "
-                     f"--exec 'web3.fromWei(eth.getBalance(eth.coinbase), \"ether\")'")
-node_1_check_blocks_alt = (f"{geth_bin_file} attach $DDR1/geth.ipc "
-                           f"--exec 'eth.getBlock(\"latest\")' > ~/nw3/mngeth/data/nohup-node_1_block.out")
+node_1_check_blocks = (f"geth attach $DDR1/geth.ipc "
+                       f"--exec 'eth.getBlock(\"latest\")' > ~/nw3/mngeth/data/nohup-node_1_block.out")
 
 
 def read_get_block(file="./data/nohup-node_1_block.out"):

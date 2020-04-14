@@ -59,12 +59,12 @@ def test_topology(topo: Topo, net: Mininet):
 
 def main():
     def delay_command(host, cmd, print=True):
-        sleep(0.1)
+        sleep(0.5)
         if print:
             hs[host - 1].cmdPrint(cmd)
         else:
             hs[host - 1].cmd(cmd)
-        sleep(0.1)
+        sleep(0.5)
 
     system('sudo mn --clean')
     setLogLevel('info')
@@ -73,8 +73,6 @@ def main():
     topo, net = get_topology()
     net.start()
 
-    # print("sleep 60 seconds for the links to be learned")
-    # sleep(60)
     # tests connections (include iperf)
     # test_topology(topo, net)
 
@@ -85,22 +83,16 @@ def main():
         h.cmdPrint("ls")
 
     delay_command(1, node_1_start)
-    delay_command(2, gen_enode)
-    delay_command(3, gen_enode)
-    delay_command(4, gen_enode)
-    delay_command(5, gen_enode)
-    delay_command(2, node_2_start)
-    delay_command(3, node_3_start)
-    delay_command(4, node_4_start)
-    delay_command(5, node_5_start)
-    delay_command(2, node_2_check_join)
-    delay_command(3, node_3_check_join)
-    delay_command(4, node_4_check_join)
-    delay_command(5, node_5_check_join)
+    for i in range(2, num_of_miners + 1):
+        delay_command(i, gen_enode)
+        delay_command(i, node_n_start.format(n=i, networkid=network_id, port=port,
+                                             ip=nodes[i - 1], etherbase=bases[i % len(bases)]))
+
+        delay_command(i, node_n_check_join.format(i))
 
     time1 = time()
     for i in range(300):
-        delay_command(1, node_1_check_blocks_alt, False)
+        delay_command(1, node_1_check_blocks, False)
         delta = time() - time1
         num = read_get_block()
         throughput = num / delta

@@ -1,6 +1,9 @@
 from pprint import pprint
 import re
+from sys import argv
 import datetime
+
+num_of_miners = int(argv[1])
 
 
 def read_file(file):
@@ -185,7 +188,7 @@ def report_metrics(nodes, rt, total_valid_count, throughputs, latencies):
 
 def main():
     # all nodes are miners
-    nodes = [f"10.0.0.{i}" for i in range(1, 6)]
+    nodes = [f"10.0.0.{i}" for i in range(1, num_of_miners + 1)]
     raw_logs = [read_file(f"./data/nohup-{i}.out") for i in nodes]
     max_valid_block_num = find_max_valid_block(raw_logs) + 1
     histories = extract_history(nodes, raw_logs, max_valid_block_num)

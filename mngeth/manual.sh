@@ -24,3 +24,13 @@ h3 nohup geth --datadir $DDR3 --networkid 714715 --port 30305 --nat extip:10.0.0
 geth attach $DDR1/geth.ipc
 geth attach $DDR2/geth.ipc
 geth attach $DDR3/geth.ipc
+
+
+#node_1_check_blocks = (f"{geth_bin_file} attach $DDR1/geth.ipc "
+#                       f"--exec 'eth.getBlock(\"latest\")'")
+#node_2_check_blocks = (f"{geth_bin_file} attach $DDR2/geth.ipc "
+#                       f"--exec 'eth.getBlock(\"latest\")'")
+#node_3_check_mine = (f"{geth_bin_file} attach $DDR3/geth.ipc "
+#                     f"--exec 'web3.fromWei(eth.getBalance(eth.coinbase), \"ether\")'")
+#node_4_check_mine = (f"{geth_bin_file} attach $DDR4/geth.ipc "
+#                     f"--exec 'web3.fromWei(eth.getBalance(eth.coinbase), \"ether\")'")
