@@ -129,7 +129,7 @@ def calculate_metrics(nodes, info_arr):
     # ...
     throughputs = [sys_tho]
     for miner in nodes:
-        print(miner)
+        # print(miner)
         miner_first_valid, miner_last_valid = None, None
         miner_valid_count = 0
         for info in info_arr:
@@ -138,11 +138,10 @@ def calculate_metrics(nodes, info_arr):
                 if miner_first_valid is None:
                     miner_first_valid = info
                 miner_last_valid = info
-        assert miner_first_valid is not None
-        assert miner_last_valid is not None
-        # print(miner_first_valid)
-        # print(miner_last_valid)
-        miner_tho = miner_valid_count / (last_valid['sender_recv_time'] - first_valid['sender_send_time'])
+        if miner_first_valid is not None:
+            miner_tho = miner_valid_count / (last_valid['sender_recv_time'] - first_valid['sender_send_time'])
+        else:
+            miner_tho = 0
         throughputs.append(miner_tho)
     # print(throughputs)
 
@@ -179,10 +178,14 @@ def report_metrics(nodes, rt, total_valid_count, throughputs, latencies):
         tho = throughputs[i + 1]
         print(f"[{nodes[i]}]\t", "throughput\t", round(tho, 2), "(blocks/sec)")
         lat = latencies[i + 1]
-        print(f"[{nodes[i]}]\t", "latency", "average", round(sum(lat) / len(lat), 2), "(sec)")
-        print(f"[{nodes[i]}]\t", "latency", "median\t", round(sorted(lat)[int(len(lat) * 0.5)], 2), "(sec)")
-        print(f"[{nodes[i]}]\t", "latency", "95th\t", round(sorted(lat)[int(len(lat) * 0.95)], 2), "(sec)")
-
+        if len(lat) != 0:
+            print(f"[{nodes[i]}]\t", "latency", "average", round(sum(lat) / len(lat), 2), "(sec)")
+            print(f"[{nodes[i]}]\t", "latency", "median\t", round(sorted(lat)[int(len(lat) * 0.5)], 2), "(sec)")
+            print(f"[{nodes[i]}]\t", "latency", "95th\t", round(sorted(lat)[int(len(lat) * 0.95)], 2), "(sec)")
+        else:
+            print(f"[{nodes[i]}]\t", "latency", "average", 0, "(sec)")
+            print(f"[{nodes[i]}]\t", "latency", "median\t", 0, "(sec)")
+            print(f"[{nodes[i]}]\t", "latency", "95th\t", 0, "(sec)")
     print("*****end of the report*****")
 
 
@@ -194,9 +197,9 @@ def main():
     histories = extract_history(nodes, raw_logs, max_valid_block_num)
     info_arr = extract_info(histories, max_valid_block_num)
 
-    print(nodes)
-    print("len(histories) = ", len(histories))
-    print("len(info_arr) = ", len(info_arr))
+    # print(nodes)
+    # print("len(histories) = ", len(histories))
+    # print("len(info_arr) = ", len(info_arr))
 
     # print_block_hist_info(histories, info_arr, 0)
     # print_block_hist_info(histories, info_arr, 1)
