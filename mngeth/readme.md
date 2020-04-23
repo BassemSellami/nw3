@@ -2,7 +2,7 @@
 
 ### Steps to Install & Use
  
-- populate a VM instance with Ubuntu 18.04 LTS, # of cpus >= # of Mininet hosts to be used
+- populate a VM instance with Ubuntu 18.04 LTS, ***# of cpus >= # of Mininet hosts to be used + 1*** (the extra core is for the Mininet's main process)
 
 - execute the following
     ```shell script
