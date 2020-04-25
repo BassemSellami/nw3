@@ -125,3 +125,47 @@ class FatTreeTopo(Topo):
                 host = self.addHost(next(self.hgen), **conf["node"])
                 self.host_list.append(host)
                 self.addLink(edge, host, **conf["link"])
+
+
+class FatTreeTopoSlow2Hosts(Topo):
+    # A Fat Tree Topology:
+    # 3 layers of switches: core, aggregate, edge
+    # 1 layer of hosts under edge switches
+    def build(self, c, a, e, h):
+        """
+        c: # of core switches
+        a: # of aggregate switches, each connects to all core switches
+        e: # of edge switches, each connects to all aggregate switches
+        h: # of hosts PER edge switch
+        """
+        self.cores = []
+        self.aggrs = []
+        self.edges = []
+        self.host_list = []
+        self.sgen = index_gen("s")
+        self.hgen = index_gen("h")
+        for i in range(c):
+            self.cores.append(self.addSwitch(next(self.sgen)))
+        for i in range(a):
+            self.aggrs.append(self.addSwitch(next(self.sgen), stp=True, failMode='standalone'))
+        for i in range(e):
+            self.edges.append(self.addSwitch(next(self.sgen), stp=True, failMode='standalone'))
+
+        for core in self.cores:
+            for aggr in self.aggrs:
+                self.addLink(core, aggr, **conf["link"])
+
+        for aggr in self.aggrs:
+            for edge in self.edges:
+                self.addLink(aggr, edge, **conf["link"])
+
+        for edge in self.edges[:2]:
+            for i in range(h):
+                host = self.addHost(next(self.hgen), **conf["nodeh1h2"])
+                self.host_list.append(host)
+                self.addLink(edge, host, **conf["linkh1h2"])
+        for edge in self.edges[2:]:
+            for i in range(h):
+                host = self.addHost(next(self.hgen), **conf["node"])
+                self.host_list.append(host)
+                self.addLink(edge, host, **conf["link"])

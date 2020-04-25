@@ -21,9 +21,9 @@ cd
 wget -q https://dl.google.com/go/go1.14.linux-amd64.tar.gz
 tar -C /usr/local -xzf go1.14.linux-amd64.tar.gz
 rm go1.14.linux-amd64.tar.gz
-echo 'export PATH=$PATH:/usr/local/go/bin' >> /etc/profile
-echo 'export GOPATH=~/go' >> /etc/profile
-source /etc/profile
+echo 'export PATH=$PATH:/usr/local/go/bin' >> /root/.profile
+echo 'export GOPATH=~/go' >> /root/.profile
+source /root/.profile
 
 cd
 wget -q https://github.com/ethereum/go-ethereum/archive/v1.9.12.tar.gz
